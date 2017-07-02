@@ -1,0 +1,13 @@
+body {
+    background-color: linen;
+    background-image: url("../images/cubes/cubes/cubes_@2X.png");
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+}
+
+h2 {
+    margin-left: 40px;
+}
