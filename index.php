@@ -7,14 +7,15 @@
 </head>
 <body>
 
+
+Hello World! ~ html<br>
+<?php
+echo "Hello World! ~ php<br>";
+?>
+
 <div id="header">
-    <h1>Lorem ipsum! Your random number for today is </h1>
+    <h1>Lorem ipsum! </h1>
     <?php include './phpfiles/randnum.php'; ?>
-
-    <?php
-        echo "Hello World!";
-    ?>
-
 </div>
 
 <div id="content">
@@ -24,10 +25,47 @@
     <p>para para para</p>
     <p>dam</p>
 
+    <?php
+        function things() {
+            echo "i am a function!";
+        }
+        things();
+
+    echo '<button>
+        click me
+    </button>';
+    ?>
+
     <h1>h1h1h1h1h1h1</h1>
     <h2>h2h <abbr title="header 2">2h</abbr> 2h2h2h2</h2>
     <h3>h3h3h3h3h3h3</h3><h4>h4h4h4h4h4h4</h4>
     <h5>h5h5h5h5h5h5</h5><h6>h6h6h6h6h6h6</h6>
+
+    <?php
+//    echo $_SERVER['SCRIPT_NAME']; echo '<br>';
+//    $host = $_SERVER['HTTP_HOST'];
+//    echo $host; echo '<br>';
+//    $image_path = $host . "/images";
+//    echo $image_path; echo '<br>';
+//    echo $_SERVER['PHP_SELF']; echo '<br>';
+//    echo $_SERVER['SERVER_ADDR']; echo '<br>';
+//    echo $_SERVER['HTTP_HOST']; echo '<br>';
+//    echo $_SERVER['REMOTE_ADDR']; echo '<br>';
+//    echo $_SERVER['REMOTE_HOST']; echo '<br>';
+//    echo $_SERVER['REMOTE_PORT']; echo '<br>';
+//    echo $_SERVER['SCRIPT_FILENAME']; echo '<br>';
+//    echo $_SERVER['SERVER_PORT']; echo '<br>';
+//    echo $_SERVER['SCRIPT_NAME']; echo '<br>';
+//    echo $_SERVER['SCRIPT_URI']; echo '<br>';
+    ?>
+
+    <form action="action.php" method="post">
+        post form
+        <p>Name: <input type="text" name="name" value="Jan"/></p>
+        <p>Surname: <input type="text" name="surname" value="Kowalski"/></p>
+        <p>Age: <input type="text" name="age" value="18"/></p>
+        <input type="submit" name="submit" value="timuS"/>
+    </form>
 
     <bdo dir="rtl" cite="http://nowhere.com">
         Ala ma kota
