@@ -2,10 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <title>mkondratek</title>
 </head>
 <body>
-Work in progress.
+<div id="header"></div>
+<div id="content">
+    <div id="status">Work in progress...</div>
+    <div style="padding-top: 20px"><button type="button" onclick="check_status()">check status</button></div>
+
+    <script>
+        function check_status() {
+            document.getElementById("status").innerHTML = Date() + "<br />Work still in progress.";
+        }
+    </script>
+</div>
+<div id="footer">Created by mkondratek © <a href="mailto:m.kondratek@o2.pl" id="mail">m.kondratek@o2.pl</a> </div>
 </body>
 </html>
