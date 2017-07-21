@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet"/>
 
     <title>mkondratek</title>
 </head>
@@ -71,25 +71,26 @@
             }
         }
 
-        if (element.style.display === "none") {
-            buttonsLeft++;
-            element.style.display = "block";
-            element.innerHTML = randLetter();
-        } else {
-            buttonsLeft--;
-            element.style.display = "none";
-            if (buttonsLeft === 0) {
-                buttonsLeft = 9;
-                setLetters();
-                document.getElementById("win").innerHTML = "You did it Mastermind! Congratulations :)";
-            }
-            else if (buttonsLeft === 8) {
-                document.getElementById("win").innerHTML = "";
-            }
-        }
         function swapVisibility(element) {
+            if (element.style.display === "none") {
+                buttonsLeft++;
+                element.style.display = "block";
+                element.innerHTML = randLetter();
+            } else {
+                buttonsLeft--;
+                element.style.display = "none";
+                if (buttonsLeft === 0) {
+                    buttonsLeft = 9;
+                    setLetters();
+                    document.getElementById("win").innerHTML = "You did it Mastermind! Congratulations :)";
+                }
+                else if (buttonsLeft === 8) {
+                    document.getElementById("win").innerHTML = "";
+                }
+            }
         }
     </script>
+
     <table>
         <tr>
             <td>
@@ -128,10 +129,11 @@
 </div>
 <div id="win"></div>
 <div id="footer">
-    <span>Created by <span style="font-weight: bold;">mkondratek</span> © Contact <a href="mailto:mik.kondratek@gmail.com" id="mail">mik.kondratek@gmail.com</a></span>
+    <span>Created by <span style="font-weight: bold;">mkondratek</span> © Contact <a
+            href="mailto:mik.kondratek@gmail.com" id="mail">mik.kondratek@gmail.com</a></span>
     <br/>
     <a href="https://github.com/mkondratek" target="_blank">
-        <img src="https://mkondratek.github.io/images/GitHub-Logos/GitHub-Logos/GitHub_Logo.png" alt="GitHub" />
+        <img src="https://mkondratek.github.io/images/GitHub-Logos/GitHub-Logos/GitHub_Logo.png" alt="GitHub"/>
     </a>
 </div>
 </body>
