@@ -13,30 +13,85 @@ body {
 
 #header {
     margin: 0 auto;
+    padding: 10px;
     text-align: center;
     color: darkred;
     font-size: 50px;
-    padding: 10px;
 }
 
 #content {
     margin: 0 auto;
+    margin-top: 20px;
+    height: 100px;
     text-align: center;
     color: midnightblue;
     font-size: 30px;
-    padding: 20px;
     letter-spacing: 3px;
+}
+
+#check button {
+    padding:5px;
+    text-transform: uppercase;
+}
+
+#check {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px
 }
 
 #footer {
     margin: 0 auto;
     text-align: center;
     font-size: 20px;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 #mail {
     color: black;
     text-decoration: none;
     font-weight: bold;
+}
+
+#game {
+    margin: 0 auto;
+    padding: 10px;
+    height: 252px;
+    width: 252px;
+    background-image: linear-gradient(to right bottom, #141414, #b4b8f0, #141414);
+    border-radius: 20px;
+}
+
+#game table {
+    border-radius: 9px;
+    border-collapse: collapse;
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+    background-color: #ececec;
+
+}
+
+#game td {
+    padding: 10px;
+    height: 64px;
+    width: 64px;
+}
+
+#game button {
+    border-radius: 5px;
+    border: 0;
+    width: 64px;
+    height: 64px;
+    display: block;
+    font-size: 32px;
+}
+
+#win {
+    margin-top: 40px;
+    font-size: 20px;
+    height: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
