@@ -89,6 +89,7 @@ url("../images/cubes/cubes/cubes_@2X.png");
     margin: 0 auto;
     padding-bottom: 10px;
     padding-top: 15px;
+    height: 70px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -96,6 +97,10 @@ url("../images/cubes/cubes/cubes_@2X.png");
     text-align: center;
     background-image: linear-gradient(#676a8e, transparent);
     color: white;
+    font-weight: 300;
+}
+
+#footer span {
     text-shadow: 2px 2px 4px #000000, -1px -1px 4px #000000;
 }
 
@@ -106,6 +111,10 @@ url("../images/cubes/cubes/cubes_@2X.png");
 }
 
 #footer img {
+    font-weight: 900;
+    text-shadow: 0;
+    box-shadow: 0;
+    color: black;
     padding-top: 5px;
     width: 100px;
 }
