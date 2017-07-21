@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
@@ -14,7 +14,7 @@
 <body>
 <div id="header"></div>
 <div id="content">
-    <div id="status"><br />Work in progress...</div>
+    <div id="status"><br/>Work in progress...</div>
 
     <script>
         function check_status() {
@@ -23,11 +23,15 @@
     </script>
 
 </div>
-<div id="check"><button type="button" onclick="check_status()">check status</button></div>
+<div id="check">
+    <button type="button" onclick="check_status()">check status</button>
+</div>
 <div id="game">
 
     <script>
-        window.onload = function () { setLetters(); };
+        window.onload = function () {
+            setLetters();
+        };
 
         var buttonsLeft = 9;
 
@@ -58,8 +62,8 @@
         }
 
         function setLetters() {
-            for (i=1; i<4; i++) {
-                for (j=1; j<4; j++) {
+            for (i = 1; i < 4; i++) {
+                for (j = 1; j < 4; j++) {
                     var element = document.getElementById("b" + i.toString() + j.toString());
                     element.innerHTML = randLetter();
                     element.style.display = "block";
@@ -67,20 +71,23 @@
             }
         }
 
-        function swapVisibility(element) {
-            if (element.style.display === "none") {
-                buttonsLeft++;
-                element.style.display = "block";
-                element.innerHTML = randLetter();
-            } else {
-                buttonsLeft--;
-                element.style.display = "none";
-                if (buttonsLeft === 0) {
-                    buttonsLeft = 9;
-                    setLetters();
-                    document.getElementById("win").innerHTML = "You did it Mastermind! Congratulations :)";
-                }
+        if (element.style.display === "none") {
+            buttonsLeft++;
+            element.style.display = "block";
+            element.innerHTML = randLetter();
+        } else {
+            buttonsLeft--;
+            element.style.display = "none";
+            if (buttonsLeft === 0) {
+                buttonsLeft = 9;
+                setLetters();
+                document.getElementById("win").innerHTML = "You did it Mastermind! Congratulations :)";
             }
+            else if (buttonsLeft === 8) {
+                document.getElementById("win").innerHTML = "";
+            }
+        }
+        function swapVisibility(element) {
         }
     </script>
     <table>
@@ -120,6 +127,11 @@
     </table>
 </div>
 <div id="win"></div>
-<div id="footer">Created by mkondratek © <a href="mailto:m.kondratek@o2.pl" id="mail">m.kondratek@o2.pl</a></div>
+<div id="footer">
+    Created by mkondratek © contact <a href="mailto:mik.kondratek@gmail.com" id="mail">mik.kondratek@gmail.com</a>
+    <br/>
+    <a href="https://github.com/mkondratek"><img src="images/GitHub-Logos/GitHub-Logos/GitHub_Logo.png"
+                                                 alt="GitHub"></a>
+</div>
 </body>
 </html>
