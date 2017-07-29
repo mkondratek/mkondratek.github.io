@@ -56,7 +56,7 @@ body {
     padding: 0;
     border: 0;
     margin: 0 auto;
-    background-color: #ececec;
+    background-color: #ededed;
 
 }
 
@@ -84,23 +84,22 @@ body {
     text-transform: uppercase;
 }
 
-#footer {
-    margin: 0 auto;
-    padding-bottom: 10px;
-    padding-top: 15px;
-    height: 70px;
+footer {
+    height: 2.2em;
     width: 100%;
     position: fixed;
     bottom: 0;
-    font-size: 20px;
-    text-align: center;
-    background-image: linear-gradient(#676a8e, transparent);
+    font-size: 20px;;
+    background-image: linear-gradient(#676a8e , transparent 500%);
     color: white;
     font-weight: 300;
 }
 
-#footer span {
+#author {
     text-shadow: 2px 2px 4px #000000, -1px -1px 4px #000000;
+    padding-left: 2em;
+    padding-top: 0.6em;
+    float:left;
 }
 
 #mail {
@@ -109,11 +108,13 @@ body {
     font-weight: bold;
 }
 
-#footer img {
+#github {
     font-weight: 900;
-    text-shadow: 0;
-    box-shadow: 0;
     color: black;
-    padding-top: 5px;
-    width: 100px;
+    float: right;
+    padding-right: 2rem;
+}
+
+#github img {
+    height: 2.2em;
 }
