@@ -3,118 +3,120 @@
 }
 
 body {
-    font-family: "Ubuntu Light", sans-serif;
-    background-color: linen;
-    background-image:
-            url("https://mkondratek.github.io/images/cubes/cubes/cubes_@2X.png"),
-            url("../images/cubes/cubes/cubes_@2X.png");
     background-attachment: fixed;
+    background-color: #ededed;
+    background-image:
+url("https://mkondratek.github.io/images/cubes/cubes/cubes_@2X.png"),
+url("../images/cubes/cubes/cubes_@2X.png");
+    font-family: "Ubuntu Light", sans-serif;
 }
 
 #header {
+    color: darkred;
+    font-size: 50px;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
-    color: darkred;
-    font-size: 50px;
 }
 
 #content {
-    margin: 0 auto;
-    margin-top: 20px;
-    height: 80px;
-    text-align: center;
     color: midnightblue;
+    height: 80px;
     font-size: 30px;
     letter-spacing: 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
 }
 
 #check button {
-    padding:10px;
     margin: 10px;
     text-transform: uppercase;
+    padding:10px;
 }
 
 #check {
     margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
-    margin-bottom: 20px
 }
 
 #game {
-    margin: 0 auto;
-    padding: 10px;
-    height: 252px;
-    width: 252px;
     background-image: linear-gradient(to right bottom, #141414, #b4b8f0, #141414);
     border-radius: 20px;
+    height: 252px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 252px;
 }
 
 #game table {
-    border-radius: 9px;
-    border-collapse: collapse;
-    padding: 0;
-    border: 0;
-    margin: 0 auto;
     background-color: #ededed;
+    border: 0;
+    border-collapse: collapse;
+    border-radius: 9px;
+    margin: 0 auto;
+    padding: 0;
 
 }
 
 #game td {
-    padding: 10px;
     height: 64px;
+    padding: 10px;
     width: 64px;
 }
 
 #game button {
     border-radius: 5px;
     border: 0;
-    width: 64px;
-    height: 64px;
     display: block;
+    height: 64px;
     font-size: 32px;
+    width: 64px;
 }
 
 #win {
-    margin-top: 30px;
     font-size: 20px;
     height: 40px;
-    text-align: center;
     letter-spacing: 2px;
+    margin-top: 30px;
+    text-align: center;
     text-transform: uppercase;
 }
 
 footer {
-    height: 2.2em;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    font-size: 20px;;
     background-image: linear-gradient(#676a8e , transparent 500%);
+    bottom: 0;
     color: white;
+    font-size: 20px;;
     font-weight: 300;
+    height: auto;
+    position: fixed;
+    width: 100%;
 }
 
 #author {
+    float: left;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-top: 12px;
     text-shadow: 2px 2px 4px #000000, -1px -1px 4px #000000;
-    padding-left: 2em;
-    padding-top: 0.6em;
-    float:left;
+    width: 80%;
 }
 
 #mail {
     color: white;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 #github {
-    font-weight: 900;
     color: black;
-    float: right;
-    padding-right: 2rem;
+    float: left;
+    font-weight: 900;
+    margin: 0 auto;
 }
 
 #github img {
-    height: 2.2em;
+    height: 40px;
 }
