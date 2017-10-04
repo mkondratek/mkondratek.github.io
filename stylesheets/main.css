@@ -1,122 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+    background-color: #fafafa;
+}
+
+body {
+    font-family: Open Sans, Arial, sans-serif;
+    color: #555;
+    font-size: 16px;
+    margin:1em auto;
+    padding: 1em 2em;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#segment1{
+    padding-top: 10px;
+    width: 220px;
+    text-align: center;
+    margin: 0 auto;
+    border: solid black 1px;
+    box-sizing: border-box;
+    background-color: rgba(22, 160, 133, 0.09);
+}
+
+#segment1 #me {
+    margin: auto;
+    overflow: hidden;
+    width: 200px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+#segment1 #name {
+    display: block;
+    line-height: 1.2;
+    margin: .2em auto;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0 10px;
+}
+
+#segment1 img {
+    margin: -50px -20px;
+
+}
+
+#segment2 {
+    margin: 0 auto;
+    letter-spacing: 2px;
+    min-width: 450px;
+    width: calc(100% - 4em - 200px);
+}
+
+.proj {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: rgba(22, 160, 133, 0.24);
+}
+
+.projname {
+    font-weight: 600;
+    min-width: 100px;
+    font-size: 1.4em;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.2em;
+}
+
+.projtype {
+    padding: 0.2em;
+    min-width: 100px;
+    font-size: 1.4em;
+    background-color: rgba(255, 255, 255, 0.5);
+    float: right;
+}
+
+.projdesc {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 530px) {
+    #segment1 {
+        float: left;
+        display: block;
+        margin: 0 115px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #segment1 {
+        float: left;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #segment2 {
+        float: right;
+        display: block;
+    }
+}
+
+footer {
+    min-width: 450px;
+    font-size: 1em;
+    position: fixed;
+    text-align: center;
+    bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em 0;
+    width: calc(100% - 4em);
+    background-color: #f3f3f3;
+    letter-spacing: 2px;
+}
+
+#footh {
+    height: 3em;
+}
+
+a {
+    color: #555;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2b2094;
+}
+
 .clear {
     clear: both;
 }
 
-body {
-    background-attachment: fixed;
-    background-color: #ededed;
-    background-image:
-url("https://mkondratek.github.io/images/cubes/cubes/cubes_@2X.png"),
-url("../images/cubes/cubes/cubes_@2X.png");
-    font-family: "Ubuntu Light", sans-serif;
-}
-
-#header {
-    color: darkred;
-    font-size: 50px;
-    margin: 0 auto;
-    padding: 10px;
+h1 {
     text-align: center;
-}
-
-#content {
-    color: midnightblue;
-    height: 80px;
-    font-size: 30px;
-    letter-spacing: 3px;
-    margin: 0 auto;
-    margin-top: 20px;
-    text-align: center;
-}
-
-#check button {
-    margin: 10px;
-    text-transform: uppercase;
-    padding:10px;
-}
-
-#check {
-    margin: 0 auto;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#game {
-    background-image: linear-gradient(to right bottom, #141414, #b4b8f0, #141414);
-    border-radius: 20px;
-    height: 252px;
-    margin: 0 auto;
-    padding: 10px;
-    width: 252px;
-}
-
-#game table {
-    background-color: #ededed;
-    border: 0;
-    border-collapse: collapse;
-    border-radius: 9px;
-    margin: 0 auto;
-    padding: 0;
-
-}
-
-#game td {
-    height: 64px;
-    padding: 10px;
-    width: 64px;
-}
-
-#game button {
-    border-radius: 5px;
-    border: 0;
-    display: block;
-    height: 64px;
-    font-size: 32px;
-    width: 64px;
-}
-
-#win {
-    font-size: 20px;
-    height: 40px;
-    letter-spacing: 2px;
-    margin-top: 30px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-footer {
-    background-image: linear-gradient(#676a8e , transparent 500%);
-    bottom: 0;
-    color: white;
-    font-size: 20px;;
-    font-weight: 300;
-    height: auto;
-    position: fixed;
-    width: 100%;
-}
-
-#author {
-    float: left;
-    margin: 0 auto;
-    padding-left: 60px;
-    padding-top: 12px;
-    text-shadow: 2px 2px 4px #000000, -1px -1px 4px #000000;
-    width: 80%;
-}
-
-#mail {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#github {
-    color: black;
-    float: left;
-    font-weight: 900;
-    margin: 0 auto;
-}
-
-#github img {
-    height: 40px;
+    font-size: 2.2em;
 }

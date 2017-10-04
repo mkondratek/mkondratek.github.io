@@ -7,141 +7,44 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/reset.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet"/>
-
     <title>mkondratek</title>
 </head>
 <body>
-<header></header>
-<div id="content">
-    <div id="status"><br/>Work in progress...</div>
-
-    <script>
-        function check_status() {
-            document.getElementById("status").innerHTML = Date() + "<br />Work still in progress.";
-        }
-    </script>
-
-</div>
-<div id="check">
-    <button type="button" onclick="check_status()">check status</button>
-</div>
-<div id="game">
-
-    <script>
-        window.onload = function () {
-            setLetters();
-        };
-
-        var buttonsLeft = 9;
-
-        function containsVowel(text) {
-            return ['a', 'e', 'i', 'o', 'u', 'y'].indexOf(text.toLowerCase()) !== -1;
-        }
-
-        function rand(a, b) {
-            if (a % 1 !== 0 || b % 1 !== 0 || a > b) return 0;
-            return Math.floor((Math.random() * Math.pow(10, b.toString().length) % (b - a + 1)) + a);
-        }
-
-        function randLetter() {
-            return String.fromCharCode(rand("A".charCodeAt(0), "Z".charCodeAt(0)));
-        }
-
-        function roll(element) {
-            var next;
-            var state;
-
-            if (containsVowel(element.innerHTML) || buttonsLeft === 9) state = "none";
-            else state = "block";
-
-            do {
-                next = "b" + rand(1, 3).toString() + rand(1, 3).toString();
-            } while (document.getElementById(next).style.display === state);
-            swapVisibility(document.getElementById(next));
-        }
-
-        function setLetters() {
-            for (i = 1; i < 4; i++) {
-                for (j = 1; j < 4; j++) {
-                    var element = document.getElementById("b" + i.toString() + j.toString());
-                    element.innerHTML = randLetter();
-                    element.style.display = "block";
-                }
-            }
-        }
-
-        function swapVisibility(element) {
-            if (element.style.display === "none") {
-                buttonsLeft++;
-                element.style.display = "block";
-                element.innerHTML = randLetter();
-            } else {
-                buttonsLeft--;
-                element.style.display = "none";
-                if (buttonsLeft === 0) {
-                    buttonsLeft = 9;
-                    setLetters();
-                    document.getElementById("win").innerHTML = "You did it Mastermind! Congratulations :)";
-                }
-                else if (buttonsLeft === 8) {
-                    document.getElementById("win").innerHTML = "";
-                }
-            }
-        }
-    </script>
-
-    <table>
-        <tr>
-            <td>
-                <button id="b11" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b12" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b13" onclick="roll(this)">?</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button id="b21" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b22" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b23" onclick="roll(this)">?</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button id="b31" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b32" onclick="roll(this)">?</button>
-            </td>
-            <td>
-                <button id="b33" onclick="roll(this)">?</button>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<div id="win">
-</div>
-
-<footer>
-    <div id="author">Created by <span style="font-weight: bold;">mkondratek</span> © Contact <a
-            href="mailto:mik.kondratek@gmail.com" id="mail">mik.kondratek@gmail.com</a>
+    <div id="segment1">
+        <div id="me">
+        <img src="https://avatars2.githubusercontent.com/u/19799111?v=4&s=400&u=828a5e29f8b1e0e4c21c8c32404f4a1870b6c76e">
+        </div>
+        <hr>
+        <div id="name">
+            Mikołaj Kondratek
+        </div>
     </div>
-    <div id="github">
-        <a href="https://github.com/mkondratek" target="_blank">
-            <img src="https://mkondratek.github.io/images/GitHub/GitHub_Logo.png" alt="GitHub"/>
-        </a>
+    <div id="segment2">
+        <h1>My projects</h1>
+        <div class="proj">
+            <div class="projname"><a href="http://github.com/mkondratek/Tetris1597" target="_blank">Tetris1597</a></div>
+            <div class="projtype">C++ | SFML</div><div class="clear"></div>
+            <div class="projdesc">Cover of famous game. While tiles are speeding up your goal is to connect them.</div>
+        </div>
+        <div class="proj">
+            <div class="projname"><a href="http://github.com/mkondratek/QuizTool" target="_blank">QuizTool</a></div>
+            <div class="projtype">Java | JavaFX | SQLite</div><div class="clear"></div>
+            <div class="projdesc">This application allows you to play quizzes. You can add your own questions and answers, play solo or duel or even change theme! :)</div>
+        </div>
+        <!--<div class="proj">-->
+            <!--<div class="projname"></div>
+            <div class="projtype"></div></br>-->
+            <!--<div class="projdesc"></div>-->
+        <!--</div>-->
     </div>
     <div class="clear"></div>
-</footer>
 
+
+    <div id="footh"></div>
+<footer>
+    Created by <span style="font-weight: bold;">mkondratek</span> ©
+    Contact <a href="mailto:mik.kondratek@gmail.com">mik.kondratek@gmail.com</a> | <a
+        href="http://github.com/mkondratek" target="_blank">github.com/mkondratek</a>
+</footer>
 </body>
 </html>
