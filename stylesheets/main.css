@@ -177,6 +177,7 @@ a:hover {
     #segment1 {
         width: 90%;
         text-align: center;
+        font-size: large;
     }
 
     #segment1 #me {
@@ -199,14 +200,15 @@ a:hover {
     }
 
     footer {
-        position: fixed;
+        position: relative;
+        /*position: fixed;*/
         bottom: 5px;
         display: block;
         width: calc(100% - 4em);
         margin: auto 5px;
     }
 
-    #footh {
-        height: 14vh;
-    }
+    /*#footh {*/
+        /*height: 14vh;*/
+    /*}*/
 }
