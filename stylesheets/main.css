@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
-    background-color: #fafafa;
+    background-color: rgba(119, 156, 171, 0.5);
 }
 
 body {
     font-family: Open Sans, Arial, sans-serif;
-    color: #555;
+    color: rgba(53, 82, 74, 0.91);
     font-size: 16px;
     margin:1em auto;
     padding: 1em 2em;
@@ -17,6 +17,8 @@ body {
 h1 {
     text-align: center;
     font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 4px;
 }
 
 
@@ -27,7 +29,8 @@ h1 {
     margin: 0 auto 10px;
     border: solid black 1px;
     box-sizing: border-box;
-    background-color: rgba(22, 160, 133, 0.09);
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: #000000 1px 1px 10px;
 }
 
 #segment1 #me {
@@ -46,11 +49,16 @@ h1 {
     text-transform: uppercase;
     text-align: left;
     padding: 0 10px;
+    color: rgba(20, 20, 20, 0.95);
+    text-shadow: darkslategrey 0.5px 0.5px 1px;
 }
 
 #segment1 img {
     margin: -50px -20px;
+}
 
+hr {
+    box-shadow: #000000 0px -0.2px 1px;
 }
 
 #segment2 {
@@ -63,30 +71,33 @@ h1 {
 .proj {
     padding: 10px;
     margin: 10px 0;
-    background-color: rgba(22, 160, 133, 0.24);
+    background-color: rgb(98, 124, 133);
+    box-shadow: #000000 1px 1px 7px;
 }
 
 .projname {
-    font-weight: 600;
+    font-weight: bold;
     min-width: 100px;
     font-size: 1.4em;
     float: left;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.90);
+    color: rgba(80, 80, 80, 0.90);
     padding: 0.2em;
 }
 
 .projtype {
-    padding: 0.2em;
+    padding: 0.2em 0.2em 0.2em 0.4em;
     min-width: 100px;
     font-size: 1.4em;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.80);
+    color: rgba(80, 80, 80, 1);
     float: right;
 }
 
 .projdesc {
     margin-top: 1em;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.70);
 }
 
 footer {
@@ -99,7 +110,7 @@ footer {
     margin-right: auto;
     padding: .5em 0;
     width: calc(100% - 4em);
-    background-color: #f3f3f3;
+    background-color: rgba(255, 255, 255, 0.4);
     letter-spacing: 2px;
 }
 
@@ -108,13 +119,13 @@ footer {
 }
 
 a {
-    color: #555;
+    color: rgba(80, 80, 80, 0.80);
 }
 
 a:hover {
     text-decoration: none;
-    color: rgba(3, 2, 8, 0.96);
-    background-color: rgba(250, 250, 250, 0.56);
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: grey 1px 1px 0.5px;
 }
 
 .clear {
