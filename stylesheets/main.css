@@ -151,6 +151,7 @@ a:hover {
     #segment1 {
         float: none;
         margin: 0 auto 20px;
+        text-align: center;
     }
 
     #segment2 {
@@ -175,6 +176,7 @@ a:hover {
 
     #segment1 {
         width: 90%;
+        text-align: center;
     }
 
     #segment1 #me {
