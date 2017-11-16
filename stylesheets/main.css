@@ -105,6 +105,14 @@ body {
     }
 }
 
+@media screen and (orientation: portrait) {
+    #segment1 {
+        float: left;
+        display: block;
+        margin: 0 115px;
+    }
+}
+
 footer {
     min-width: 450px;
     font-size: 1em;
