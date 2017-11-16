@@ -53,10 +53,6 @@ h1 {
     text-shadow: darkslategrey 0.5px 0.5px 1px;
 }
 
-#segment1 img {
-    margin: -50px -20px;
-}
-
 hr {
     box-shadow: #000000 0px -0.2px 1px;
 }
@@ -167,6 +163,7 @@ a:hover {
 
     #segment2 {
         width: 100%;
+        font-size: 1.8vw;
     }
 
     h1 {
