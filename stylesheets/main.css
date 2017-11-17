@@ -103,10 +103,9 @@ footer {
     position: fixed;
     text-align: center;
     bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: .5em 0;
-    width: calc(100% - 4em);
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.4);
     letter-spacing: 2px;
 }
@@ -205,7 +204,5 @@ a:hover {
         position: relative;
         bottom: 5px;
         display: block;
-        width: calc(100% - 4em);
-        margin: 5px auto;
     }
 }
