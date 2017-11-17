@@ -206,6 +206,6 @@ a:hover {
         bottom: 5px;
         display: block;
         width: calc(100% - 4em);
-        margin: auto 5px;
+        margin: 5px auto;
     }
 }
