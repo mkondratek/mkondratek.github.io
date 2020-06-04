@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: Open Sans, Arial, sans-serif;
-    color: rgba(53, 82, 74, 0.91);
+    color: rgba(13, 12, 14, 0.95);
     font-size: 16px;
     margin: 1em auto;
     padding: 1em 2em;
@@ -36,7 +36,7 @@ h1 {
 #segment1 #me {
     overflow: hidden;
     width: 200px;
-    height: 180px;
+    height: 200px;
     margin: auto auto 10px;
 }
 
