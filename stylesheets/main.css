@@ -206,3 +206,15 @@ a:hover {
         display: block;
     }
 }
+
+#wrapper {
+    overflow: hidden;
+    height: 320px;
+}
+#first {
+    float: left;
+}
+#second {
+    overflow: hidden;
+    padding-left: 10px;
+}
