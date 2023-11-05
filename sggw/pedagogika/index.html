@@ -2,7 +2,8 @@
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
-    <title>SGGW Pedagogika</title>
+    <title>SGGW Pedagogika 2023-2026, 1 rok</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,13 +24,121 @@
         .answer {
             margin-left: 20px;
         }
+
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .dataTables_wrapper {
+            display: inline-table;
+
+            /* below optional .*/
+            --width: auto;
+            --max-width: 45%;
+        }
     </style>
 </head>
 <body>
 <a href="..">Wróć</a> </br> </br>
-<h1>Pedagogika SGGW</h1>
+<h1>Pedagogika SGGW 2023-2026, 1 rok</h1>
+
+<h2>Kolokwia, egzaminy, zaliczenia, terminy</h2>
+<table id="myTable" class="display">
+    <thead>
+    <tr>
+        <th>Data</th>
+        <th>Przedmiot</th>
+        <th>Rodzaj</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>20.11.2023</td>
+        <td>Systemy oświatowe</td>
+        <td>Test</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Emisja głosu</td>
+        <td>Kolokwium</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Emisja głosu</td>
+        <td>Egzamin</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Psychologia ogólna</td>
+        <td>Egzamin (testowy)</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Międzynarodowe stosunki gospodarcze</td>
+        <td>Test (łatwy)</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Etyka</td>
+        <td>Egzamin</td>
+    </tr>
+    <tr>
+        <td>tbd</td>
+        <td>Wstęp do filozofii</td>
+        <td>Egzamin</td>
+    </tr>
+    <tr>
+        <td>23.11.2023</td>
+        <td>Prawo dla pedagogów</td>
+        <td>Test</td>
+    </tr>
+    <tr>
+        <td>16.11.2023</td>
+        <td>Prawo dla pedagogów</td>
+        <td>Kazus</td>
+    </tr>
+    <tr>
+        <td>10.11.2023</td>
+        <td>Historia myśli pedagogicznej</td>
+        <td>Recenzja książki</td>
+    </tr>
+    <tr>
+        <td>17.11.2023</td>
+        <td>Historia myśli pedagogicznej</td>
+        <td>Egzamin</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Notatki</h2>
 <ol>
-    <li class="question"><a href="prawo-dla-pedagogow">Prawo dla pedagogów</a> </li>
+    <li class="question"><a href="prawo-dla-pedagogow">Prawo dla pedagogów</a></li>
 </ol>
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let table = new DataTable('#myTable', {
+            info: false,
+            // ordering: false,
+            paging: false,
+            autoWidth: true,
+            searching: false
+        });
+    });
+</script>
 </body>
 </html>
