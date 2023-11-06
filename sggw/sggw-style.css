@@ -27,6 +27,10 @@ h1 {
     color: #2a6496;
 }
 
+.content {
+    max-width: 80ch;
+    padding: 0 10px;
+}
 
 .breadcrumb {
     background: #dcdcdc;
