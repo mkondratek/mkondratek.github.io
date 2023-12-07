@@ -58,119 +58,119 @@
     </thead>
     <tbody>
     <tr>
-        <td>20.11.2023</td>
+        <td>20/11/2023</td>
         <td>Systemy oświatowe</td>
         <td>dr J. Stachowicz</td>
         <td>Test</td>
         <td></td>
     </tr>
     <tr>
-        <td>08.01.2024</td>
+        <td>08/01/2024</td>
         <td>Emisja głosu</td>
         <td>dr M. Jurewicz</td>
         <td>Kolokwium</td>
         <td></td>
     </tr>
     <tr>
-        <td>DO USTALENIA</td>
+        <td>99/99/9999</td>
         <td>Emisja głosu</td>
         <td>dr M. Jurewicz</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>DO USTALENIA</td>
+        <td>99/99/9999</td>
         <td>Psychologia ogólna</td>
         <td>dr A. Rędzio</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>25.01.2024</td>
+        <td>25/01/2024</td>
         <td>Teoria wychowania</td>
         <td>dr M. Dobrzyniak</td>
         <td>Egzamin</td>
         <td>Teams, sala wykładowa, 14:00</td>
     </tr>
     <tr>
-        <td>DO USTALENIA</td>
+        <td>99/99/9999</td>
         <td>Międzynarodowe stosunki gospodarcze</td>
         <td>dr J. Stefańczyk</td>
         <td>Test</td>
         <td></td>
     </tr>
     <tr>
-        <td>18.01.2024</td>
+        <td>18/01/2024</td>
         <td>Etyka</td>
         <td>dr hab. K. Najder-Stefaniak</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>18.01.2024</td>
+        <td>18/01/2024</td>
         <td>Wstęp do filozofii</td>
         <td>dr hab. K. Najder-Stefaniak</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>23.11.2023</td>
+        <td>23/11/2023</td>
         <td>Prawo dla pedagogów</td>
         <td>dr A. Hrehorowicz</td>
         <td>Test</td>
         <td></td>
     </tr>
     <tr>
-        <td>16.11.2023</td>
+        <td>16/11/2023</td>
         <td>Prawo dla pedagogów</td>
         <td>dr A. Hrehorowicz</td>
         <td>Kazus</td>
         <td></td>
     </tr>
     <tr>
-        <td>10.11.2023</td>
+        <td>10/11/2023</td>
         <td>Historia myśli pedagogicznej</td>
         <td>prof. dr hab. T. Zaniewska</td>
         <td>Recenzja książki</td>
         <td></td>
     </tr>
     <tr>
-        <td>17.11.2023</td>
+        <td>17/11/2023</td>
         <td>Historia myśli pedagogicznej</td>
         <td>prof. dr hab. T. Zaniewska</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>17.06.2024</td>
+        <td>17/06/2024</td>
         <td>Język angielski</td>
         <td>Emilia Skonieczna</td>
         <td>Egzamin</td>
         <td></td>
     </tr>
     <tr>
-        <td>30.11.2023</td>
+        <td>30/11/2023</td>
         <td>Język angielski</td>
         <td>Magdalena Cholewa</td>
         <td>Test</td>
         <td></td>
     </tr>
     <tr>
-        <td>17.06.2024</td>
+        <td>17/06/2024</td>
         <td>Język angielski</td>
         <td>Konstanty Hilszczański</td>
         <td>Zaliczenie</td>
         <td></td>
     </tr>
     <tr>
-        <td>14.11.2023</td>
+        <td>14/11/2023</td>
         <td>Język niemiecki</td>
         <td>Halina Kozłowska</td>
         <td>Kolokwium</td>
         <td></td>
     </tr>
     <tr>
-        <td>05.01.2024</td>
+        <td>05/01/2024</td>
         <td>Wprowadzenie do pedagogiki</td>
         <td>mgr U. Dobrosielska</td>
         <td>Kolokwium</td>
@@ -181,14 +181,23 @@
 
 <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.13.7/sorting/date-eu.js"></script>
+
 <script>
     $(document).ready(function () {
         let table = new DataTable('#myTable', {
             info: false,
-            // ordering: false,
+            ordering: true,
             paging: false,
             autoWidth: true,
-            searching: false
+            searching: false,
+            columnDefs: [
+                {
+                    targets: 0,
+                    type: 'date-eu'
+                }
+            ]
         });
     });
 </script>
