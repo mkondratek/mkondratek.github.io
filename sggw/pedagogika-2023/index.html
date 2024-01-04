@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Pedagogika 2023-2026, 1 rok</title>
@@ -46,6 +46,11 @@
 </ol>
 
 <h2>Kolokwia, egzaminy, zaliczenia, terminy</h2>
+
+<label>
+    <input type="checkbox" id="showPassedCheckbox"> Pokaż minione
+</label>
+
 <table id="myTable" class="display">
     <thead>
     <tr>
@@ -241,6 +246,33 @@
                 }
             ]
         });
+
+    // Function to toggle visibility based on checkbox state
+    function updateTableVisibility() {
+        let showPassed = $('#showPassedCheckbox').is(':checked');
+        let currentDate = moment();
+
+        table.rows().every(function (index, element) {
+            let rowDate = moment(this.data()[0], 'DD/MM/YYYY');
+
+            if (!showPassed && rowDate.isBefore(currentDate, 'day')) {
+                this.nodes().to$().hide();
+            } else {
+                this.nodes().to$().show();
+            }
+        });
+    }
+
+    // Initialize the DataTable
+    updateTableVisibility();
+
+    // Handle checkbox change event
+    $('#showPassedCheckbox').change(function () {
+        updateTableVisibility();
+    });
+
+    // Enable the checkbox by default when the DataTable is initialized
+    $('#showPassedCheckbox').prop('checked', false);
     });
 </script>
 </body>
