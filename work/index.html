@@ -32,10 +32,6 @@
             background-color: #f2f2f2;
         }
 
-        #buildNumInput {
-            width: 100px;
-        }
-
         .buildNumStyle {
             font-size: 24px;
             color: #007bff; /* Blue color */
@@ -93,7 +89,7 @@
                 const timeInPoland = new Date(millisNow + (3600000 * 1)).toUTCString();
                 document.getElementById('timePolandInput').textContent = timeInPoland;
             } else {
-                alert('Please enter a valid number for the build number.');
+                // alert('Please enter a valid number for the build number.');
             }
         }
 
@@ -101,7 +97,32 @@
         window.onload = function () {
             updateFromCurrentTime();
             setInterval(updateFromCurrentTime, 1000); // Update time every second
+
+            // Add event listener to input field for arrow key presses
+            document.getElementById('buildNumInput').addEventListener('keydown', function(event) {
+                if (event.key === 'ArrowUp') {
+                    event.preventDefault(); // Prevent the default behavior (e.g., scrolling)
+                    incrementBuildNum();
+                } else if (event.key === 'ArrowDown') {
+                    event.preventDefault(); // Prevent the default behavior (e.g., scrolling)
+                    decrementBuildNum();
+                }
+            });
         };
+
+        // Function to increment build number
+        function incrementBuildNum() {
+            const buildNumInput = document.getElementById('buildNumInput');
+            buildNumInput.value = parseInt(buildNumInput.value) + 1;
+            updateFromBuildNum();
+        }
+
+        // Function to decrement build number
+        function decrementBuildNum() {
+            const buildNumInput = document.getElementById('buildNumInput');
+            buildNumInput.value = parseInt(buildNumInput.value) - 1;
+            updateFromBuildNum();
+        }
     </script>
 </head>
 <body>
@@ -117,7 +138,7 @@
         <tr>
             <td>Build Number</td>
             <td id="buildNum" class="buildNumStyle"></td>
-            <td><input type="text" id="buildNumInput" class="buildNumStyle" oninput="updateFromBuildNum()"></td>
+            <td><input type="text" id="buildNumInput" class="buildNumStyle" oninput="updateFromBuildNum()" placeholder="Write buildnum"></td>
         </tr>
         <tr>
             <td>Current UTC Time</td>
