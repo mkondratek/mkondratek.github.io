@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Number and Time Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #buildNum {
+            font-size: 24px;
+            color: #007bff; /* Blue color */
+        }
+    </style>
+    <script>
+        // Function to update time and build number every second
+        function updateTimeAndBuildNumber() {
+            const MILLIS_START_YEAR = 1696363761000;
+            const MAX_SEMVER_PATCH_NUMBER = 65535;
+            const MILLIS_IN_ONE_MINUTE = 60000;
+            const MINUTES_IN_ONE_YEAR = 525600;
+
+            // Get current time in milliseconds
+            const millisNow = new Date().getTime();
+
+            // Calculate build number
+            const buildNumMillis = millisNow - MILLIS_START_YEAR;
+            const buildNumMinutes = buildNumMillis / MILLIS_IN_ONE_MINUTE;
+            const buildNum = Math.floor((buildNumMinutes * MAX_SEMVER_PATCH_NUMBER) / MINUTES_IN_ONE_YEAR);
+
+            // Display build number
+            const buildNumElement = document.getElementById('buildNum');
+            buildNumElement.textContent = buildNum;
+
+            // Display UTC time
+            document.getElementById('timeUTC').textContent = new Date(millisNow).toUTCString();
+
+            // Display time in Poland (UTC + 1)
+            const timeInPoland = new Date(millisNow + (3600000 * 1)).toUTCString();
+            document.getElementById('timePoland').textContent = timeInPoland;
+        }
+
+        // Update time and build number initially and set interval to update every second
+        window.onload = function () {
+            updateTimeAndBuildNumber();
+            setInterval(updateTimeAndBuildNumber, 1000);
+        };
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Build Number and Time Display</h1>
+
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Build Number</td>
+            <td id="buildNum"></td>
+        </tr>
+        <tr>
+            <td>Current UTC Time</td>
+            <td id="timeUTC"></td>
+        </tr>
+        <tr>
+            <td>Current Time in Poland</td>
+            <td id="timePoland"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
