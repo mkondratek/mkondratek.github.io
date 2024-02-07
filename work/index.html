@@ -26,6 +26,7 @@
             text-align: left;
             border-bottom: 1px solid #ddd;
             width: 200px; /* Fixed width for table cells */
+            white-space: nowrap;
         }
 
         th {
@@ -59,8 +60,8 @@
             document.getElementById('timeUTC').textContent = new Date(millisNow).toUTCString();
 
             // Display time in Poland (UTC + 1)
-            const timeInPoland = new Date(millisNow + (3600000 * 1)).toUTCString();
-            document.getElementById('timePoland').textContent = timeInPoland;
+            const timeInLocal = new Date(millisNow).toLocaleString();
+            document.getElementById('timePoland').textContent = timeInLocal;
         }
 
         // Function to update time and build number based on user input
@@ -86,8 +87,8 @@
                 document.getElementById('timeUTCInput').textContent = new Date(millisNow).toUTCString();
 
                 // Display time in Poland (UTC + 1)
-                const timeInPoland = new Date(millisNow + (3600000 * 1)).toUTCString();
-                document.getElementById('timePolandInput').textContent = timeInPoland;
+                const timeInLocal = new Date(millisNow).toLocaleString();
+                document.getElementById('timePolandInput').textContent = timeInLocal;
             } else {
                 // alert('Please enter a valid number for the build number.');
             }
@@ -149,12 +150,12 @@
             <td><input type="text" id="buildNumInput" class="buildNumStyle" oninput="updateFromBuildNum()" placeholder="Write buildnum"></td>
         </tr>
         <tr>
-            <td>Current UTC Time</td>
+            <td>Current Time</td>
             <td id="timeUTC"></td>
             <td id="timeUTCInput"></td>
         </tr>
         <tr>
-            <td>Current Time in Poland</td>
+            <td>Current Local Time</td>
             <td id="timePoland"></td>
             <td id="timePolandInput"></td>
         </tr>
