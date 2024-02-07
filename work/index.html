@@ -98,6 +98,14 @@
             updateFromCurrentTime();
             setInterval(updateFromCurrentTime, 1000); // Update time every second
 
+            // Check if build number is passed as URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const buildNumParam = urlParams.get('buildnum');
+            if (buildNumParam !== null && !isNaN(buildNumParam)) {
+                document.getElementById('buildNumInput').value = buildNumParam;
+                updateFromBuildNum();
+            }
+
             // Add event listener to input field for arrow key presses
             document.getElementById('buildNumInput').addEventListener('keydown', function(event) {
                 if (event.key === 'ArrowUp') {
