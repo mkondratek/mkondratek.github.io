@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedagogika 2023-2026, Semestr 2</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/sggw/sggw-style.css">
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+<div class="breadcrumb">
+    <a href="../..">SGGW</a> / <a href="..">Pedagogika 2023-2026</a> / Semestr 2
+</div>
+<a href="https://github.com/mkondratek/mkondratek.github.io/issues/new" target="_blank">
+    <button>Zgłoś błąd</button>
+</a>
+<h1>Pedagogika 2023-2026, Semestr 2</h1>
+
+<!--<h2>Notatki</h2>-->
+<!--<ol>-->
+<!--    <li class="menu_opt"><a href="prawo-dla-pedagogow">Prawo dla pedagogów</a></li>-->
+<!--</ol>-->
+
+<h2>Kolokwia, egzaminy, zaliczenia, terminy</h2>
+
+<label>
+    <input type="checkbox" id="showPassedCheckbox"> Pokaż minione
+</label>
+<br>
+
+<table id="myTable" class="display">
+    <thead>
+    <tr>
+        <th>Data</th>
+        <th>Przedmiot</th>
+        <th>Osoba prowadząca</th>
+        <th>Rodzaj</th>
+        <th>Komentarz</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>05/06/2024</td>
+        <td>Biomedyczne podstawy rozwoju</td>
+        <td>dr A. Berkowska</td>
+        <td>Test</td>
+        <td>30 pytań, 60% zalicza</td>
+    </tr>
+    <tr>
+        <td>14/06/2024</td>
+        <td>Komunikacja społeczna</td>
+        <td>dr U. Dobrosielska</td>
+        <td>Kolokwium</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11/06/2024</td>
+        <td>Pedagogika społeczna</td>
+        <td>prof. dr hab. E. Przybylska</td>
+        <td>Test</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>12/06/2024</td>
+        <td>Psychologia rozwojowa</td>
+        <td>dr A. Rowicka </td>
+        <td>Test</td>
+        <td>50% + 1pkt zalicza</td>
+    </tr>
+    <tr>
+        <td>12/06/2024</td>
+        <td>Psychologia uczenia się</td>
+        <td>dr A. Rowicka </td>
+        <td>Test</td>
+        <td>50% + 1pkt zalicza</td>
+    </tr>
+    <tr>
+        <td>11/06/2024</td>
+        <td>Podmiotowy wymiar bezpieczeństwa</td>
+        <td>dr hab. K. Najder-Stefaniak</td>
+        <td>Test</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>17/06/2024</td>
+        <td>Pedagogika specjalna</td>
+        <td>dr hab. E. Skrzetuska</td>
+        <td>Egzamin</td>
+        <td>Termin 0/1 (?)</td>
+    </tr>
+    <tr>
+        <td>21/06/2024</td>
+        <td>Pedagogika specjalna</td>
+        <td>dr hab. E. Skrzetuska</td>
+        <td>Egzamin</td>
+        <td>Termin 1/2 (?)</td>
+    </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.13.7/sorting/date-eu.js"></script>
+
+<script>
+    $(document).ready(function () {
+        let table = new DataTable('#myTable', {
+            info: false,
+            ordering: true,
+            paging: false,
+            autoWidth: true,
+            searching: true,
+            columnDefs: [
+                {
+                    targets: 0,
+                    type: 'date-eu'
+                }
+            ]
+        });
+
+    // Function to toggle visibility based on checkbox state
+    function updateTableVisibility() {
+        let showPassed = $('#showPassedCheckbox').is(':checked');
+        let currentDate = moment();
+
+        table.rows().every(function (index, element) {
+            let rowDate = moment(this.data()[0], 'DD/MM/YYYY');
+
+            if (!showPassed && rowDate.isBefore(currentDate, 'day')) {
+                this.nodes().to$().hide();
+            } else {
+                this.nodes().to$().show();
+            }
+        });
+    }
+
+    // Initialize the DataTable
+    updateTableVisibility();
+
+    // Handle checkbox change event
+    $('#showPassedCheckbox').change(function () {
+        updateTableVisibility();
+    });
+
+    // Enable the checkbox by default when the DataTable is initialized
+    $('#showPassedCheckbox').prop('checked', false);
+    });
+</script>
+</body>
+</html>
