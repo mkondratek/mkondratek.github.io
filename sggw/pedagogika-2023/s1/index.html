@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Pedagogika 2023-2026, Semestr 1</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="/sggw/sggw-style.css">
     <style>
         table {
@@ -28,17 +29,21 @@
 <div class="breadcrumb">
     <a href="../..">SGGW</a> / <a href="..">Pedagogika 2023-2026</a> / Semestr 1
 </div>
-<a href="https://github.com/mkondratek/mkondratek.github.io/issues/new" target="_blank">
+<a href="https://github.com/mkondratek/mkondratek.github.io/issues/new"
+   target="_blank">
     <button>Zgłoś błąd</button>
 </a>
 <h1>Pedagogika 2023-2026, Semestr 1</h1>
 
 <h2>Notatki</h2>
 <ol>
-    <li class="menu_opt"><a href="prawo-dla-pedagogow">Prawo dla pedagogów</a></li>
+    <li class="menu_opt"><a href="prawo-dla-pedagogow">Prawo dla pedagogów</a>
+    </li>
     <li class="menu_opt"><a href="emisja-glosu">Emisja głosu</a></li>
-    <li class="menu_opt"><a href="wprowadzenie-do-pedagogiki">Wprowadzenie do pedagogiki</a></li>
-    <li class="menu_opt"><a href="wstep-do-socjologii">Wstęp do socjologii</a></li>
+    <li class="menu_opt"><a href="wprowadzenie-do-pedagogiki">Wprowadzenie do
+        pedagogiki</a></li>
+    <li class="menu_opt"><a href="wstep-do-socjologii">Wstęp do socjologii</a>
+    </li>
 </ol>
 
 <h2>Kolokwia, egzaminy, zaliczenia, terminy</h2>
@@ -89,7 +94,10 @@
             Zdalnie, 18:00; Zagadnienia związane z głosem tzn:
             <ol>
                 <li>Głos jako narzędzie pracy pedagoga,</li>
-                <li>Język, system językowy, sprawności i kompetencje, błędy językowe, metody oparte na słowie w procesie oddziaływania dydaktycznego,</li>
+                <li>Język, system językowy, sprawności i kompetencje, błędy
+                    językowe, metody oparte na słowie w procesie oddziaływania
+                    dydaktycznego,
+                </li>
                 <li>Choroby zawodowe</li>
             </ol>
         </td>
@@ -106,14 +114,18 @@
         <td>Psychologia ogólna</td>
         <td>dr A. Rędzio</td>
         <td>Egzamin</td>
-        <td>Sala A-17, bud. 6, osoby o nazwiskach rozpoczynających się na A-K - o godzinie 10.00</td>
+        <td>Sala A-17, bud. 6, osoby o nazwiskach rozpoczynających się na A-K -
+            o godzinie 10.00
+        </td>
     </tr>
     <tr>
         <td>29/01/2024</td>
         <td>Psychologia ogólna</td>
         <td>dr A. Rędzio</td>
         <td>Egzamin</td>
-        <td>Sala A-17, bud. 6, osoby o nazwiskach rozpoczynających się na L-Ż - o godzinie 12.00</td>
+        <td>Sala A-17, bud. 6, osoby o nazwiskach rozpoczynających się na L-Ż -
+            o godzinie 12.00
+        </td>
     </tr>
     <tr>
         <td>08/02/2024</td>
@@ -193,24 +205,10 @@
         <td></td>
     </tr>
     <tr>
-        <td>17/06/2024</td>
-        <td>Język angielski</td>
-        <td>Emilia Skonieczna</td>
-        <td>Egzamin</td>
-        <td></td>
-    </tr>
-    <tr>
         <td>30/11/2023</td>
         <td>Język angielski</td>
         <td>Magdalena Cholewa</td>
         <td>Test</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>17/06/2024</td>
-        <td>Język angielski</td>
-        <td>Konstanty Hilszczański</td>
-        <td>Zaliczenie</td>
         <td></td>
     </tr>
     <tr>
@@ -286,10 +284,14 @@
     </tbody>
 </table>
 
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
-<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.13.7/sorting/date-eu.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+<script type="text/javascript" charset="utf8"
+        src="//cdn.datatables.net/plug-ins/1.13.7/sorting/date-eu.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -307,32 +309,63 @@
             ]
         });
 
-    // Function to toggle visibility based on checkbox state
-    function updateTableVisibility() {
-        let showPassed = $('#showPassedCheckbox').is(':checked');
-        let currentDate = moment();
+        // Function to toggle visibility based on checkbox state
+        function updateTableVisibility() {
+            let showPassed = $('#showPassedCheckbox').is(':checked');
+            let currentDate = moment();
 
-        table.rows().every(function (index, element) {
-            let rowDate = moment(this.data()[0], 'DD/MM/YYYY');
+            table.rows().every(function (index, element) {
+                let rowDate = moment(this.data()[0], 'DD/MM/YYYY');
 
-            if (!showPassed && rowDate.isBefore(currentDate, 'day')) {
-                this.nodes().to$().hide();
-            } else {
-                this.nodes().to$().show();
-            }
-        });
-    }
+                if (!showPassed && rowDate.isBefore(currentDate, 'day')) {
+                    this.nodes().to$().hide();
+                } else {
+                    this.nodes().to$().show();
+                }
+            });
+        }
 
-    // Initialize the DataTable
-    updateTableVisibility();
-
-    // Handle checkbox change event
-    $('#showPassedCheckbox').change(function () {
+        // Initialize the DataTable
         updateTableVisibility();
-    });
 
-    // Enable the checkbox by default when the DataTable is initialized
-    $('#showPassedCheckbox').prop('checked', false);
+        // Handle checkbox change event
+        $('#showPassedCheckbox').change(function () {
+            updateTableVisibility();
+        });
+
+        // Enable the checkbox by default when the DataTable is initialized
+        $('#showPassedCheckbox').prop('checked', false);
+
+
+        // Funkcja haszująca dla stringów
+        function hashCode(str) {
+            var hash = 0;
+            if (str.length === 0) return hash;
+            for (var i = 0; i < str.length; i++) {
+                var char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Konwersja do 32-bitowego integer
+            }
+            return hash;
+        }
+
+        // Funkcja generująca jasny kolor na podstawie wartości przedmiotu
+        function getBrightColorForSubject(subject) {
+            var hash = hashCode(subject);
+            var hue = Math.abs(hash) % 360; // Wartość hue z zakresu od 0 do 359
+            var saturation = 80; // Stała wartość nasycenia
+            var lightness = 80; // Stała wartość jasności
+            var color = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
+            return color;
+        }
+
+        // Iteracja przez wszystkie wiersze tabeli
+        $('#myTable tbody tr').each(function () {
+            var przedmiot = $(this).find('td:eq(1)').text(); // Pobranie wartości z komórki w kolumnie Przedmiot
+
+            // Przypisanie jasnego koloru tła do komórki w kolumnie Przedmiot na podstawie wartości przedmiotu
+            $(this).find('td:eq(1)').css('background-color', getBrightColorForSubject(przedmiot));
+        });
     });
 </script>
 </body>
