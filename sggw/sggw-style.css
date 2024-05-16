@@ -52,3 +52,26 @@ h1 {
 .breadcrumb span {
     color: #999;
 }
+
+.banner {
+    background-color: #ff6161; /* Light red background */
+    color: #111; /* Dark text color */
+    padding: 2px 0; /* Add padding */
+    text-align: center; /* Center align text */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    font-family: Arial, sans-serif; /* Use a common sans-serif font */
+    font-size: 28px; /* Font size */
+    margin-bottom: 10px;
+}
+
+.banner a {
+    color: #333; /* Dark text color for links */
+    text-decoration: underline; /* Underline links */
+}
+
+.banner a:hover {
+    color: #666; /* Darker color on hover */
+}
