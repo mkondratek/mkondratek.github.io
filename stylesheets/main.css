@@ -1,220 +1,91 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-html {
-    background-color: rgba(119, 156, 171, 0.5);
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Open Sans, Arial, sans-serif;
-    color: rgba(13, 12, 14, 0.95);
-    font-size: 16px;
-    margin: 1em auto;
-    padding: 1em 2em;
-    line-height: 1.4;
-    text-align: justify;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.2em;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-
-#segment1 {
-    padding-top: 10px;
-    width: 220px;
-    text-align: center;
-    margin: 0 auto 10px;
-    border: solid black 1px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.70);
-    box-shadow: #000000 1px 1px 10px;
-    float: left;
-}
-
-#segment1 #me {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    margin: auto auto 10px;
-}
-
-#segment1 img {
-    width: 100%;
-}
-
-#segment1 #name {
-    display: block;
-    line-height: 1.2;
-    margin: .2em auto;
-    font-size: 2em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: left;
-    padding: 2px 10px;
-    color: rgba(20, 20, 20, 0.95);
-    text-shadow: darkslategrey 0.5px 0.5px 1px;
-}
-
-hr {
-    box-shadow: #000000 0px -0.2px 1px;
-}
-
-#segment2 {
-    margin: 0 auto;
-    float: right;
-    letter-spacing: 2px;
-    width: calc(100% - 4em - 200px);
-}
-
-.proj {
+nav {
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    margin: 10px 0;
-    background-color: rgb(98, 124, 133);
-    box-shadow: #000000 1px 1px 7px;
-}
-
-.projname {
-    font-weight: bold;
-    font-size: 1.4em;
-    float: left;
-    background-color: rgba(255, 255, 255, 0.90);
-    color: rgba(80, 80, 80, 0.90);
-    padding: 0.2em;
-}
-
-.projtype {
-    padding: 0.2em 0.2em 0.2em 0.4em;
-    font-size: 1.4em;
-    background-color: rgba(255, 255, 255, 0.80);
-    color: rgba(80, 80, 80, 1);
-    float: right;
-}
-
-.projdesc {
-    margin-top: 1em;
-    padding: 1em;
-    background-color: rgba(255, 255, 255, 0.70);
-}
-
-footer {
-    font-size: 1.1em;
-    position: fixed;
     text-align: center;
-    bottom: 10px;
-    margin: 0 auto;
-    padding: .5em 0;
-    width: 95%;
-    background-color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 2px;
 }
 
-#footh {
-    height: 3em;
+nav ul {
+    display: flex;
+    justify-content: center;
 }
 
-a {
-    color: rgba(80, 80, 80, 0.80);
+nav ul li {
+    margin: 0 15px;
 }
 
-a:hover {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.7);
-    text-shadow: grey 1px 1px 0.5px;
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.clear {
-    clear: both;
+nav ul li a:hover {
+    color: #007BFF;
 }
 
-@media screen and (max-width: 950px) and (orientation: landscape) {
-    #segment1 {
-        float: left;
-        margin: 0 auto;
-    }
-
-    #segment2 {
-        float: right;
-        display: block;
-        font-size: 1.7vw;
-    }
-
-    #segment2 .projdesc {
-        font-size: 3vmin;
-    }
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 800px) and (orientation: landscape) {
-
-    #segment1 {
-        float: none;
-        margin: 0 auto 20px;
-        text-align: center;
-    }
-
-    #segment2 {
-        float: none;
-        width: 100%;
-    }
-
-    #segment2 .proj, #segment2 .projtype {
-        font-size: 1.2em;
-    }
-
-    footer {
-        position: relative;
-    }
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-@media screen and (orientation: portrait) {
-    #segment1, #segment2 {
-        float: none;
-        margin: 0 auto;
-    }
-
-    #segment1 {
-        width: 90%;
-    }
-
-    #segment1 #me {
-        width: 95%;
-        height: auto;
-    }
-
-    #segment2 {
-        width: 100%;
-        font-size: 2.4vw;
-    }
-
-    #name {
-        font-size: 3em;
-    }
-
-    #segment2 .projtype, #segment2 .projname {
-        font-size: 2.8vw;
-    }
-
-    h1 {
-        font-size: 10vw;
-        padding: 20px;
-    }
-
-    footer {
-        position: relative;
-        bottom: 5px;
-        display: block;
-    }
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
 }
 
-#wrapper {
-    overflow: hidden;
-    height: 320px;
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-#first {
-    float: left;
-}
-#second {
-    overflow: hidden;
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+    border-left: 4px solid #007BFF;
     padding-left: 10px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+#contact p a {
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+#contact p a:hover {
+    color: #0056b3;
 }
