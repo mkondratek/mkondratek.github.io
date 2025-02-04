@@ -16,15 +16,17 @@ body {
 }
 
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 5px; /* Reduced padding for a more compact look */
-    text-align: right; /* Align to the right for a subtle placement */
+    background-color: #fff; /* Lightened background color */
+    color: #333; /* Darker text color for contrast */
+    padding: 5px;
+    text-align: right;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    display: inline-flex; /* Inline-flex for a horizontal layout */
-    gap: 10px; /* Space between language options */
+    display: inline-flex;
+    gap: 10px;
 }
 
 nav ul li {
@@ -32,17 +34,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ccc;
+    color: #333;
     font-size: 0.9em;
     transition: color 0.3s;
     display: flex;
-    align-items: center; /* Aligns text and icon vertically */
-    gap: 5px; /* Space between flag and text */
+    align-items: center;
+    gap: 5px;
+    width: 80px; /* Fixed width to prevent flickering */
+    justify-content: left; /* Center the content */
 }
 
 nav ul li a:hover {
-    color: #fff;
-}header {
+    color: #007BFF;
+}
+
+header {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -70,16 +76,15 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Space between columns */
+    gap: 20px;
 }
 
 .container section {
-    flex: 1 1 30%; /* Grow to fill space, shrink if needed, base width 30% */
-    min-width: 200px; /* Minimum width for each section */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    flex: 1 1 30%;
+    min-width: 200px;
+    box-sizing: border-box;
 }
 
-/* Ensure sections stack vertically on smaller screens */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -90,7 +95,7 @@ section h2 {
     margin-bottom: 10px;
     font-size: 1.5em;
     color: #333;
-    border-left: 4px solid #007BFF; /* Consistent blue color */
+    border-left: 4px solid #007BFF;
     padding-left: 10px;
 }
 
@@ -102,11 +107,11 @@ section ul li {
     margin-bottom: 5px;
 }
 
-#contact ul li a {
-    color: #007BFF; /* Changed link color to blue */
+#contact p a {
+    color: #007BFF;
     transition: color 0.3s;
 }
 
-#contact ul li a:hover {
-    color: #0056b3; /* Darker blue on hover */
+#contact p a:hover {
+    color: #0056b3;
 }
