@@ -18,30 +18,31 @@ body {
 nav {
     background-color: #333;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    padding: 5px; /* Reduced padding for a more compact look */
+    text-align: right; /* Align to the right for a subtle placement */
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
+    display: inline-flex; /* Inline-flex for a horizontal layout */
+    gap: 10px; /* Space between language options */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
-    color: #fff;
-    font-weight: bold;
+    color: #ccc;
+    font-size: 0.9em;
     transition: color 0.3s;
+    display: flex;
+    align-items: center; /* Aligns text and icon vertically */
+    gap: 5px; /* Space between flag and text */
 }
 
 nav ul li a:hover {
-    color: #007BFF; /* Changed hover color to blue */
-}
-
-header {
+    color: #fff;
+}header {
     text-align: center;
     margin-bottom: 20px;
 }

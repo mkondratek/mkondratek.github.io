@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
         pl: 'locales/pl.json'
     };
 
+    let currentLanguage = 'en';
+
     function updateContent(language) {
         fetch(languageFiles[language])
             .then(response => response.json())
@@ -30,17 +32,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     li.textContent = service;
                     servicesList.appendChild(li);
                 });
-            }).catch(error => console.error('Error loading language file:', error));
+
+                // Update the flag icon and text
+                const flagIcon = document.getElementById('flag-icon');
+                const langName = document.getElementById('lang-name');
+                if (language === 'en') {
+                    flagIcon.textContent = '🇵🇱';
+                    langName.textContent = ' Polski';
+                } else {
+                    flagIcon.textContent = '🇬🇧';
+                    langName.textContent = ' English';
+                }
+            })
+            .catch(error => console.error('Error loading language file:', error));
     }
 
-    document.getElementById('lang-en').addEventListener('click', function () {
-        updateContent('en');
-    });
-
-    document.getElementById('lang-pl').addEventListener('click', function () {
-        updateContent('pl');
+    document.getElementById('lang-toggle').addEventListener('click', function (event) {
+        event.preventDefault();
+        currentLanguage = currentLanguage === 'en' ? 'pl' : 'en';
+        updateContent(currentLanguage);
     });
 
     // Initialize with English content
-    updateContent('en');
+    updateContent(currentLanguage);
 });
