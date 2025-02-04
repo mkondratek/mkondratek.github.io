@@ -101,11 +101,11 @@ section ul li {
     margin-bottom: 5px;
 }
 
-#contact p a {
+#contact ul li a {
     color: #007BFF; /* Changed link color to blue */
     transition: color 0.3s;
 }
 
-#contact p a:hover {
+#contact ul li a:hover {
     color: #0056b3; /* Darker blue on hover */
 }
