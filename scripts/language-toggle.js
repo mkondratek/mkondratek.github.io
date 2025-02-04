@@ -30,13 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     li.textContent = service;
                     servicesList.appendChild(li);
                 });
-
-                document.querySelector('#contact p').innerHTML = `
-                    Email: <a href="mailto:${content.contact}">${content.contact}</a><br>
-                    <a href="http://github.com/mkondratek" target="_blank">GitHub</a>  | 
-                    <a href="https://www.linkedin.com/in/mkondratek/" target="_blank">LinkedIn</a>
-                `;
-            })            .catch(error => console.error('Error loading language file:', error));
+            }).catch(error => console.error('Error loading language file:', error));
     }
 
     document.getElementById('lang-en').addEventListener('click', function () {

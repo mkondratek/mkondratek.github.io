@@ -1,12 +1,18 @@
-
 {
-    "name": "Mikołaj Kondratek",
-    "motto": "It is my belief that software engineering is an art of problem solving using computers and programming.",
-    "bio": "Internal tooling, automation & helping developers to do their job gives me the greatest pleasure.",
-    "interestsHeader": "Areas of Interest",
-    "servicesHeader": "My Services",
-    "contactHeader": "Contact",
-    "interests": ["Tooling & Developer Efficiency", "JVM World", "Open Source"],
-    "services": ["IT Consulting", "Creating Websites", "Other Services"],
-    "contact": "mik.kondratek@gmail.com"
+  "name": "Mikołaj Kondratek",
+  "motto": "It is my belief that software engineering is an art of problem solving using computers and programming.",
+  "bio": "Internal tooling, automation & helping developers to do their job gives me the greatest pleasure.",
+  "interestsHeader": "Areas of Interest",
+  "servicesHeader": "My Services",
+  "contactHeader": "Contact",
+  "interests": [
+    "Tooling & Developer Efficiency",
+    "JVM World",
+    "Open Source"
+  ],
+  "services": [
+    "IT Consulting",
+    "Creating Websites",
+    "Other Services"
+  ]
 }

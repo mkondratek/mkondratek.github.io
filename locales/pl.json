@@ -1,12 +1,18 @@
-
 {
-    "name": "Mikołaj Kondratek",
-    "motto": "Wierzę, że inżynieria oprogramowania to sztuka rozwiązywania problemów za pomocą komputerów i programowania.",
-    "bio": "Narzędzia wewnętrzne, automatyzacja i pomoc programistom w wykonywaniu ich pracy sprawiają mi największą przyjemność.",
-    "interestsHeader": "Obszary Zainteresowań",
-    "servicesHeader": "Moje Usługi",
-    "contactHeader": "Kontakt",
-    "interests": ["Narzędzia & Efektywność", "Świat JVM", "Open Source"],
-    "services": ["Doradztwo IT", "Tworzenie Stron", "Inne Usługi"],
-    "contact": "mik.kondratek@gmail.com"
+  "name": "Mikołaj Kondratek",
+  "motto": "Wierzę, że inżynieria oprogramowania to sztuka rozwiązywania problemów za pomocą komputerów i programowania.",
+  "bio": "Narzędzia wewnętrzne, automatyzacja i pomoc programistom w wykonywaniu ich pracy sprawiają mi największą przyjemność.",
+  "interestsHeader": "Obszary Zainteresowań",
+  "servicesHeader": "Moje Usługi",
+  "contactHeader": "Kontakt",
+  "interests": [
+    "Narzędzia & Efektywność",
+    "Świat JVM",
+    "Open Source"
+  ],
+  "services": [
+    "Doradztwo IT",
+    "Tworzenie Stron",
+    "Inne Usługi"
+  ]
 }
