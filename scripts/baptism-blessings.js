@@ -1,36 +1,27 @@
 // Random blessings for baptism page
 const blessings = [
     {
-        text: "„Pozostawcie dzieci i&nbsp;nie przeszkadzajcie im przyjść do&nbsp;Mnie,<br>albowiem do&nbsp;takich należy królestwo niebieskie."",
+        text: "Dopuśćcie dzieci i nie przeszkadzajcie im przyjść do Mnie; do takich bowiem należy królestwo niebieskie.",
         reference: "Mt 19,14"
     },
     {
-        text: "„A wy będziecie mi świadkami w&nbsp;Jerozolimie i&nbsp;w&nbsp;całej Judei, i&nbsp;w&nbsp;Samarii, i&nbsp;aż po&nbsp;krańce ziemi."",
-        reference: "Dz 1,8"
-    },
-    {
-        text: "„Chrzcząc ich w&nbsp;imię Ojca i&nbsp;Syna, i&nbsp;Ducha Świętego, ucząc ich zachowywać wszystko, co&nbsp;wam przykazałem."",
+        text: "Idźcie więc i nauczajcie wszystkie narody4, udzielając im chrztu w imię Ojca i Syna, i Ducha Świętego. Uczcie je zachowywać wszystko, co wam przykazałem. A oto Ja jestem z wami przez wszystkie dni, aż do skończenia świata.",
         reference: "Mt 28,19-20"
     },
     {
-        text: "„Rodzina jest pierwszą szkołą cnót społecznych, których potrzebuje każde społeczeństwo."",
-        reference: "Jan Paweł II"
+        text: "Dlatego rodzina jest pierwszą szkołą cnót społecznych, potrzebnych wszelkim społecznościom.",
+        reference: "Jan Paweł II, Familiaris consortio"
     },
     {
-        text: "„Miłość rodzinna jest źródłem i&nbsp;zarazem duszą społeczności, narodu i&nbsp;państwa."",
-        reference: "Jan Paweł II"
-    },
-    {
-        text: "„Wiara nie&nbsp;jest prywatną sprawą. Ona ma&nbsp;wymiar społeczny i&nbsp;wyraża się&nbsp;we&nbsp;wspólnocie."",
-        reference: "Benedykt XVI"
-    },
-    {
-        text: "„W sakramencie chrztu otrzymujemy nowe narodzenie, które pozwala nam uczestniczyć w&nbsp;życiu samego Boga."",
-        reference: "Benedykt XVI"
-    },
-    {
-        text: "„Boże, Ty w&nbsp;niewysłowionej Opatrzności wybrałeś świętego Józefa na&nbsp;Oblubieńca Najświętszej Rodzicielki Twojego Syna, spraw, abyśmy oddając mu na&nbsp;ziemi cześć jako opiekunowi, zasłużyli na&nbsp;jego orędownictwo w&nbsp;niebie. Przez Chrystusa, Pana naszego. Amen."",
+        text: "Boże, Ty w&nbsp;niewysłowionej Opatrzności wybrałeś świętego Józefa na&nbsp;Oblubieńca Najświętszej Rodzicielki Twojego Syna, spraw, abyśmy oddając mu na&nbsp;ziemi cześć jako opiekunowi, zasłużyli na&nbsp;jego orędownictwo w&nbsp;niebie.",
         reference: "Litania do św. Józefa"
+    },
+    {
+        text: "Zbudziwszy się&nbsp;ze&nbsp;snu, Józef uczynił tak, jak mu polecił anioł Pański",
+        reference: "Mt 1,24"
+    }, 
+    {
+        text: "Ite ad Joseph.",
     }
 ];
 
@@ -43,7 +34,7 @@ function displayRandomBlessing() {
     if (blessingContent) {
         blessingContent.innerHTML = `
             <p><em>${blessing.text}</em></p>
-            <p class="bible-ref">${blessing.reference}</p>
+            ${blessing.reference ? `<p class="bible-ref">${blessing.reference}</p>` : ''}
         `;
     }
 }
