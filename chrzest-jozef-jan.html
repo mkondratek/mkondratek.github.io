@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrzest Józefa Jana</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/baptism.css"/>
+</head>
+<body>
+    <div class="baptism-container">
+        <header class="baptism-header">
+            <h1>Józef Jan Kondratek</h1>
+            <div class="dates">
+                <p class="birth-date">Urodzony: 13 grudnia 2024</p>
+                <p class="baptism-date">Chrzest: 15 sierpnia 2025</p>
+            </div>
+        </header>
+
+        <section class="baby-photo">
+            <div class="photo-placeholder">
+                <img src="images/jozef-photo.jpg" alt="Józef Jan Kondratek" class="baby-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="photo-placeholder-text" style="display: none;">
+                    📸 Zdjęcie Józefa Jana
+                </div>
+            </div>
+        </section>
+
+        <section class="thank-you">
+            <h2>Dziękujemy za&nbsp;przybycie</h2>
+            <p>Wasza obecność w&nbsp;tym wyjątkowym dniu sprawia, że&nbsp;staje się&nbsp;on jeszcze bardziej znaczący. Józef Jan zostanie otoczony miłością i&nbsp;błogosławieństwem dzięki wszystkim zebranym.</p>
+        </section>
+
+        <section class="blessing">
+            <div class="blessing-text" id="blessing-content">
+                <!-- Blessing will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <footer class="baptism-footer">
+            <p>Z&nbsp;miłością,<br>Rodzina Kondratków</p>
+        </footer>
+    </div>
+    <script src="scripts/baptism-blessings.js"></script>
+</body>
+</html>

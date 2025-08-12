@@ -1,0 +1,163 @@
+/* Baptism page specific styles */
+.baptism-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.baptism-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.baptism-header h1 {
+    font-size: 2.2em;
+    color: #2c5aa0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.dates {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.birth-date, .baptism-date {
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.baby-photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo-placeholder {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.baby-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-placeholder-text {
+    background-color: #f0f0f0;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #666;
+    border: 2px dashed #ccc;
+}
+
+.thank-you {
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you h2 {
+    color: #2c5aa0;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border: none;
+    padding: 0;
+}
+
+.thank-you p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+}
+
+.blessing {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fafafa, #f0f8ff);
+    border-radius: 12px;
+    border-left: 4px solid #2c5aa0;
+}
+
+.blessing-text {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #2c5aa0;
+    line-height: 1.8;
+}
+
+.bible-ref {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.baptism-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.baptism-footer p {
+    font-size: 1em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .baptism-container {
+        padding: 15px;
+    }
+    
+    .baptism-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .dates {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .thank-you h2 {
+        font-size: 1.5em;
+    }
+    
+    .photo-placeholder {
+        max-width: 250px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .baptism-container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .baptism-header, .thank-you, .blessing {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
