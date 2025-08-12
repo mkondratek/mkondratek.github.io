@@ -149,6 +149,170 @@
     }
 }
 
+/* Guest personalization styles */
+.guest-info {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #2c5aa0;
+}
+
+.guest-info small {
+    color: #666;
+    font-style: italic;
+}
+
+/* Family tree styles */
+#family-tree {
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fafafa, #f0f8ff);
+    border-radius: 12px;
+}
+
+#family-tree h2 {
+    text-align: center;
+    color: #2c5aa0;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+    border: none;
+    padding: 0;
+}
+
+.tree {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.tree-person {
+    flex: 0 0 auto;
+}
+
+.person-card {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 80px;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.person-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.person-name {
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #333;
+    white-space: pre-line;
+    line-height: 1.3;
+}
+
+.parent-card {
+    border-color: #2c5aa0;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+}
+
+.child-card {
+    border-color: #4caf50;
+    background: linear-gradient(135deg, #e8f5e8, #ffffff);
+    min-width: 120px;
+}
+
+.main-name {
+    font-size: 1em;
+    color: #2c5aa0;
+    margin-bottom: 8px;
+}
+
+.person-details {
+    font-size: 0.7em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.birth-date, .baptism-date {
+    margin: 2px 0;
+}
+
+.tree-connections {
+    height: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.connection-line {
+    position: absolute;
+    background-color: #ccc;
+}
+
+.great-connections .connection-line.paternal {
+    left: 25%;
+    width: 25%;
+    height: 2px;
+    top: 50%;
+}
+
+.great-connections .connection-line.maternal {
+    right: 25%;
+    width: 25%;
+    height: 2px;
+    top: 50%;
+}
+
+.parent-connections .connection-line.parents {
+    left: 37.5%;
+    width: 25%;
+    height: 2px;
+    top: 50%;
+}
+
+.child-connection .connection-line.child {
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+/* Mobile family tree */
+@media (max-width: 768px) {
+    .tree-level {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .person-card {
+        min-width: 70px;
+        padding: 8px;
+    }
+    
+    .person-name {
+        font-size: 0.75em;
+    }
+    
+    .main-name {
+        font-size: 0.9em;
+    }
+    
+    .connection-line {
+        display: none; /* Hide complex lines on mobile */
+    }
+}
+
 /* Timeline styles */
 #baby-timeline {
     margin-top: 30px;

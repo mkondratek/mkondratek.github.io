@@ -5,7 +5,7 @@ const blessings = [
         reference: "Mt 19,14"
     },
     {
-        text: "Idźcie więc i nauczajcie wszystkie narody4, udzielając im chrztu w imię Ojca i Syna, i Ducha Świętego. Uczcie je zachowywać wszystko, co wam przykazałem. A oto Ja jestem z wami przez wszystkie dni, aż do skończenia świata.",
+        text: "Idźcie więc i nauczajcie wszystkie narody, udzielając im chrztu w imię Ojca i Syna, i Ducha Świętego. Uczcie je zachowywać wszystko, co wam przykazałem. A oto Ja jestem z wami przez wszystkie dni, aż do skończenia świata.",
         reference: "Mt 28,19-20"
     },
     {
