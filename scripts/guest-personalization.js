@@ -1,6 +1,6 @@
 // Guest personalization based on URL parameters
-// Usage: chrzest-jozef-jan.html?guest=Babciu Mariu&message=Custom message
-// or: chrzest-jozef-jan.html?guest=Wujku Tomku (uses default message)
+// Usage: pages/chrzest-jozef-jan.html?guest=Babciu Mariu&message=Custom message
+// or: pages/chrzest-jozef-jan.html?guest=Wujku Tomku (uses default message)
 
 // Function to get URL parameter
 function getURLParameter(name) {

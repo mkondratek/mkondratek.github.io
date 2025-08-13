@@ -13,19 +13,19 @@ function updateNavigationLinks() {
     // Update main page links
     const mainLinks = document.querySelectorAll('#back-to-main, .to-main');
     mainLinks.forEach(link => {
-        link.href = 'chrzest-jozef-jan.html' + currentParams;
+        link.href = 'pages/chrzest-jozef-jan.html' + currentParams;
     });
     
     // Update family tree links
     const familyLinks = document.querySelectorAll('#to-family, .to-family');
     familyLinks.forEach(link => {
-        link.href = 'rodzina-jozef-jan.html' + currentParams;
+        link.href = 'pages/rodzina-jozef-jan.html' + currentParams;
     });
     
     // Update timeline links
     const timelineLinks = document.querySelectorAll('#to-timeline, .to-timeline');
     timelineLinks.forEach(link => {
-        link.href = 'czasopis-jozef-jan.html' + currentParams;
+        link.href = 'pages/czasopis-jozef-jan.html' + currentParams;
     });
 }
 
