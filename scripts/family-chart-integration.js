@@ -1,0 +1,408 @@
+// Family tree integration using family-chart library with embedded data
+
+// Embedded family data (from family-tree.json)
+const familyData = [
+    {
+        "id": "0",
+        "rels": {
+            "father": "10",
+            "mother": "11",
+            "spouses": [],
+            "children": []
+        },
+        "data": {
+            "first name": "Józef",
+            "second name": "Jan", 
+            "last name": "Kondratek",
+            "maiden name": "",
+            "birthdate": "13/12/2024",
+            "birth place": "Warszawa",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "1",
+        "rels": {
+            "spouses": ["2"],
+            "children": ["6"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "2",
+        "rels": {
+            "spouses": ["1"],
+            "children": ["6"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "3",
+        "rels": {
+            "spouses": ["4"],
+            "children": ["7"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "4",
+        "rels": {
+            "spouses": ["3"],
+            "children": ["7"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "5",
+        "rels": {
+            "spouses": ["15"],
+            "children": ["8"]
+        },
+        "data": {
+            "first name": "Władysław",
+            "second name": "",
+            "last name": "Cuper",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "15",
+        "rels": {
+            "spouses": ["5"],
+            "children": ["8"]
+        },
+        "data": {
+            "first name": "Irena",
+            "second name": "",
+            "last name": "Cuper",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "16",
+        "rels": {
+            "spouses": ["17"],
+            "children": ["9"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "17",
+        "rels": {
+            "spouses": ["16"],
+            "children": ["9"]
+        },
+        "data": {
+            "first name": "[Imię]",
+            "second name": "",
+            "last name": "[Nazwisko]",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "6",
+        "rels": {
+            "father": "1",
+            "mother": "2",
+            "spouses": ["7"],
+            "children": ["10", "12", "13"]
+        },
+        "data": {
+            "first name": "Jan",
+            "second name": "",
+            "last name": "Kondratek",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "7",
+        "rels": {
+            "father": "3",
+            "mother": "4",
+            "spouses": ["6"],
+            "children": ["10", "12", "13"]
+        },
+        "data": {
+            "first name": "Joanna",
+            "second name": "",
+            "last name": "Kondratek",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "8",
+        "rels": {
+            "father": "5",
+            "mother": "15",
+            "spouses": ["9"],
+            "children": ["11", "14"]
+        },
+        "data": {
+            "first name": "Jarosław",
+            "second name": "",
+            "last name": "Cuper",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "9",
+        "rels": {
+            "father": "16",
+            "mother": "17",
+            "spouses": ["8"],
+            "children": ["11", "14"]
+        },
+        "data": {
+            "first name": "Beata",
+            "second name": "",
+            "last name": "Cuper",
+            "maiden name": "[Panieńskie]",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "10",
+        "rels": {
+            "father": "6",
+            "mother": "7",
+            "spouses": ["11"],
+            "children": ["0"]
+        },
+        "data": {
+            "first name": "Mikołaj",
+            "second name": "Gustaw",
+            "last name": "Kondratek",
+            "maiden name": "",
+            "birthdate": "02/08/1997",
+            "birth place": "Rzeszów",
+            "death date": "",
+            "death place": "",
+            "occupation": "Software Engineer",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "11",
+        "rels": {
+            "father": "8",
+            "mother": "9",
+            "spouses": ["10"],
+            "children": ["0"]
+        },
+        "data": {
+            "first name": "Katarzyna",
+            "second name": "Aleksandra",
+            "last name": "Kondratek",
+            "maiden name": "Cuper",
+            "birthdate": "04/11/2000",
+            "birth place": "Łódź",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "F"
+        }
+    },
+    {
+        "id": "12",
+        "rels": {
+            "father": "6",
+            "mother": "7",
+            "spouses": [],
+            "children": []
+        },
+        "data": {
+            "first name": "Kacper",
+            "second name": "Dionizy",
+            "last name": "Kondratek",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "13",
+        "rels": {
+            "father": "6",
+            "mother": "7",
+            "spouses": [],
+            "children": []
+        },
+        "data": {
+            "first name": "Hubert",
+            "second name": "Maurycy",
+            "last name": "Kondratek",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    },
+    {
+        "id": "14",
+        "rels": {
+            "father": "8",
+            "mother": "9",
+            "spouses": [],
+            "children": []
+        },
+        "data": {
+            "first name": "Szymon",
+            "second name": "",
+            "last name": "Cuper",
+            "maiden name": "",
+            "birthdate": "",
+            "birth place": "",
+            "death date": "",
+            "death place": "",
+            "occupation": "",
+            "gender": "M"
+        }
+    }
+];
+
+// Create the family chart
+function createFamilyChart() {
+    const data = familyData;
+    
+    console.log('Family data length:', data.length);
+    console.log('First person:', data[0]);
+    console.log('f3 available:', typeof f3);
+    
+    if (data.length === 0) {
+        document.getElementById('FamilyChart').innerHTML = '<p>Błąd ładowania danych rodziny</p>';
+        return;
+    }
+
+    const f3Chart = f3.createChart('#FamilyChart', data)
+        .setCardXSpacing(250)
+        .setCardYSpacing(120);
+    
+    // Setup card with basic display
+    const f3Card = f3Chart.setCard(f3.CardHtml)
+        .setCardDisplay([["first name", "last name"]])
+        .setCardDim({w: 200, h: 80});
+    
+    f3Chart.updateTree({initial: true})
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', createFamilyChart);
+
+// Handle potential errors
+window.addEventListener('error', function(e) {
+    if (e.message.includes('f3')) {
+        console.error('Family chart library error:', e);
+        document.getElementById('FamilyChart').innerHTML = `
+            <div style="padding: 40px; text-align: center; color: #666;">
+                <h3>Błąd ładowania drzewa rodziny</h3>
+                <p>Spróbuj odświeżyć stronę</p>
+            </div>
+        `;
+    }
+});

@@ -6,7 +6,9 @@
     <title>Drzewo Rodziny - Józef Jan Kondratek</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/baptism.css"/>
-    <!-- Family chart library will be added here -->
+    <script src="https://unpkg.com/d3@6"></script>
+    <script src="https://unpkg.com/family-chart@0.7.2"></script>
+    <link rel="stylesheet" href="stylesheets/family-chart.css">
 </head>
 <body>
     <div class="baptism-container">
@@ -15,13 +17,9 @@
             <p class="subtitle">Rodzina Józefa Jana Kondratka</p>
         </header>
 
-        <!-- Family Tree Container - placeholder for now -->
+        <!-- Family Tree Container -->
         <section id="family-tree-container">
-            <div class="placeholder-content">
-                <h2>🌳 Interaktywne Drzewo Rodziny</h2>
-                <p>Tutaj będzie wyświetlone drzewo genealogiczne rodziny Józefa Jana.</p>
-                <p><em>Implementacja w trakcie przygotowania...</em></p>
-            </div>
+            <div id="FamilyChart" class="f3 f3-cont" style="width:100%;height:800px;margin:auto;"></div>
         </section>
 
         <!-- Navigation Section -->
@@ -45,6 +43,6 @@
     </div>
     
     <script src="scripts/url-params-helper.js"></script>
-    <!-- Family tree JavaScript will be added here -->
+    <script src="scripts/family-chart-integration.js"></script>
 </body>
 </html>

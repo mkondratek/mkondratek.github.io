@@ -163,7 +163,7 @@
     font-style: italic;
 }
 
-/* Family tree placeholder styles */
+/* Family tree container styles */
 #family-tree-container {
     margin: 30px 0;
     padding: 20px;
@@ -171,22 +171,34 @@
     border-radius: 12px;
 }
 
-.placeholder-content {
-    text-align: center;
-    padding: 40px 20px;
+/* Family tree styles restored */
+#FamilyChart {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.placeholder-content h2 {
-    color: #2c5aa0;
-    margin-bottom: 20px;
-    font-size: 1.6em;
-    border: none;
-    padding: 0;
+/* Override family-chart library styles for better integration */
+.f3-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 8px !important;
 }
 
-.placeholder-content p {
-    color: #666;
-    margin-bottom: 10px;
+.f3-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Mobile responsiveness for family chart */
+@media (max-width: 768px) {
+    #family-tree-container {
+        padding: 10px;
+        margin: 20px 0;
+    }
+    
+    #FamilyChart {
+        height: 600px !important;
+    }
 }
 
 
