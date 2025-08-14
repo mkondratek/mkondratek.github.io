@@ -547,8 +547,9 @@
     .timeline-item::before {
         content: '';
         position: absolute;
-        left: -25px;
-        top: 15px;
+        left: -35px;
+        /* todo: fix positioning in mobile mode */
+        top: 155px; 
         width: 10px;
         height: 10px;
         background-color: #2c5aa0;
