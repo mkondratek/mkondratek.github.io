@@ -9,13 +9,42 @@ async function loadTimelineData() {
     }
 }
 
-// Function to calculate age display
-function formatAge(days) {
-    if (days < 30) {
-        return `${days} ${days === 1 ? 'dzień' : days < 5 ? 'dni' : 'dni'}`;
+// Function to calculate age display using proper date calculation
+function formatAge(currentDate) {
+    const birthDate = new Date('2024-12-13');
+    const targetDate = new Date(currentDate);
+    
+    // Calculate total days difference
+    const diffTime = targetDate - birthDate;
+    const totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (totalDays === 0) {
+        return '0 dni';
     }
-    const months = Math.floor(days / 30);
-    const remainingDays = days % 30;
+    
+    if (totalDays < 30) {
+        return `${totalDays} ${totalDays === 1 ? 'dzień' : totalDays < 5 ? 'dni' : 'dni'}`;
+    }
+    
+    // Calculate months and remaining days
+    let months = 0;
+    let checkDate = new Date(birthDate);
+    
+    // Count full months
+    while (true) {
+        const nextMonth = new Date(checkDate);
+        nextMonth.setMonth(nextMonth.getMonth() + 1);
+        
+        if (nextMonth <= targetDate) {
+            months++;
+            checkDate = nextMonth;
+        } else {
+            break;
+        }
+    }
+    
+    // Calculate remaining days
+    const remainingDays = Math.floor((targetDate - checkDate) / (1000 * 60 * 60 * 24));
     
     let ageString = `${months} ${months === 1 ? 'miesiąc' : months < 5 ? 'miesiące' : 'miesięcy'}`;
     if (remainingDays > 0) {
@@ -46,7 +75,7 @@ async function generateTimeline() {
         <div class="timeline-item${item.hidden ? ' timeline-hidden' : ''}">
             <div class="timeline-date">
                 <span class="date">${item.hidden ? '' : formatPolishDate(item.date)}</span>
-                <span class="age">${item.hidden ? '' : formatAge(item.ageInDays)}</span>
+                <span class="age">${item.hidden ? '' : formatAge(item.date)}</span>
             </div>
             <div class="timeline-content">
                 <div class="timeline-image">
@@ -57,7 +86,7 @@ async function generateTimeline() {
                         📸
                     </div>`}
                 </div>
-                <div class="timeline-text" data-date="${item.hidden ? '' : formatPolishDate(item.date)}" data-age="${item.hidden ? '' : formatAge(item.ageInDays)}">
+                <div class="timeline-text" data-date="${item.hidden ? '' : formatPolishDate(item.date)}" data-age="${item.hidden ? '' : formatAge(item.date)}">
                     ${item.hidden ? '' : `<h3>${item.title}</h3>
                     <p class="location">📍 ${item.location}</p>`}
                 </div>

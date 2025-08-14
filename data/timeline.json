@@ -1,7 +1,6 @@
 [
     {
         "date": "2024-12-10",
-        "ageInDays": -3,
         "location": "",
         "title": "",
         "imagePath": "",
@@ -9,182 +8,156 @@
     },
     {
         "date": "2024-12-13",
-        "ageInDays": 0,
         "location": "Szpital Południowy, Warszawa",
         "title": "Józio urodził się",
         "imagePath": "../images/jozef/PXL_20241213_080825943.jpg"
     },
     {
         "date": "2024-12-17",
-        "ageInDays": 4,
         "location": "DS Limba, Warszawa",
         "title": "Józio wrócił ze szpitala do domu",
         "imagePath": "../images/jozef/PXL_20241217_165851832.MP.jpg"
     },
     {
         "date": "2024-12-24",
-        "ageInDays": 11,
         "location": "Piotrków Trybunalski",
         "title": "Wigilia Bożego Narodzenia",
         "imagePath": "../images/jozef/PXL_20241224_175758902.jpg"
     },
     {
         "date": "2024-12-28",
-        "ageInDays": 15,
-        "location": "Piotrków Trybunalski", 
+        "location": "Piotrków Trybunalski",
         "title": "Józio spotyka wszystkich dziadków na raz",
         "imagePath": "../images/jozef/PXL_20241228_174529297.MP.jpg"
     },
     {
         "date": "2025-01-11",
-        "ageInDays": 29,
         "location": "Piccolo Pizzaiolo, Warszawa",
         "title": "Józio wychodzi na pizzę",
         "imagePath": "../images/jozef/PXL_20250111_172912407.jpg"
     },
     {
         "date": "2025-01-24",
-        "ageInDays": 42,
         "location": "Miejsce zbiórki przed DS&nbspLimba, Warszawa",
         "title": "Ktoś przypalił kolację i Józio musiał się ewakuować",
         "imagePath": "../images/jozef/PXL_20250124_185608497.MP.jpg"
     },
     {
         "date": "2025-02-01",
-        "ageInDays": 50,
         "location": "Piotrków Trybunalski",
         "title": "Józio sobie śpi...",
         "imagePath": "../images/jozef/PXL_20250201_134740198.PORTRAIT.jpg"
     },
     {
         "date": "2025-03-08",
-        "ageInDays": 85,
         "location": "DS Limba, Warszawa",
         "title": "Pierwszy Dzień Kobiet",
         "imagePath": "../images/jozef/PXL_20250308_064514099.PORTRAIT.ORIGINAL.jpg"
     },
     {
         "date": "2025-05-03",
-        "ageInDays": 141,
         "location": "Zakrzówek, Kraków",
         "title": "Owiedziny w Krakowie",
         "imagePath": "../images/jozef/PXL_20250503_120013554.PORTRAIT.jpg"
     },
     {
         "date": "2025-05-24",
-        "ageInDays": 162,
         "location": "Piotrków Trybunalski",
         "title": "Józio z tatą",
         "imagePath": "../images/jozef/PXL_20250524_073251442.PORTRAIT.jpg"
     },
     {
         "date": "2025-05-26",
-        "ageInDays": 164,
         "location": "DS Limba, Warszawa",
         "title": "Józio z mamą",
         "imagePath": "../images/jozef/PXL_20250526_151956613.PORTRAIT.jpg"
     },
     {
         "date": "2025-05-26",
-        "ageInDays": 164,
-        "location": "DS Limba, Warszawa", 
+        "location": "DS Limba, Warszawa",
         "title": "Józio z królem",
         "imagePath": "../images/jozef/PXL_20250526_165843322.MP.jpg"
     },
     {
         "date": "2025-05-30",
-        "ageInDays": 168,
         "location": "DS Limba, Warszawa",
         "title": "Józio z awokado",
         "imagePath": "../images/jozef/PXL_20250530_062819822.PORTRAIT.jpg"
     },
     {
         "date": "2025-06-27",
-        "ageInDays": 196,
         "location": "Piccolo Pizzaiolo, Warszawa",
         "title": "Józio je pizzę",
         "imagePath": "../images/jozef/PXL_20250627_111110823.PORTRAIT.jpg"
     },
     {
         "date": "2025-07-03",
-        "ageInDays": 202,
         "location": "Piotrków Trybunalski",
         "title": "Józio wchodzi na szafkę nocną i robi grandę",
         "imagePath": "../images/jozef/PXL_20250703_165537241.jpg"
     },
     {
         "date": "2025-07-05",
-        "ageInDays": 204,
         "location": "Piotrków Trybunalski",
         "title": "Józio je kokosa",
         "imagePath": "../images/jozef/PXL_20250705_175158277.PORTRAIT.jpg"
     },
     {
         "date": "2025-07-06",
-        "ageInDays": 205,
         "location": "Happy Horse, Raków",
         "title": "Józio głaszcze konika",
         "imagePath": "../images/jozef/PXL_20250706_085324535.jpg"
     },
     {
         "date": "2025-07-15",
-        "ageInDays": 214,
         "location": "DS Limba, Warszawa",
         "title": "Józio siedzi sam w foteliku i coś je",
         "imagePath": "../images/jozef/PXL_20250715_141258617.PORTRAIT.jpg"
     },
     {
         "date": "2025-07-11",
-        "ageInDays": 210,
         "location": "Piotrków Trybunalski",
         "title": "Józio na przewijaku, a&nbsp;to nawet nie jest on",
         "imagePath": "../images/jozef/PXL_20250711_135027612.MP.jpg"
     },
     {
         "date": "2025-07-22",
-        "ageInDays": 221,
         "location": "Piotrków Trybunalski",
         "title": "Józio z mamą i pieskiem w ogrodzie",
         "imagePath": "../images/jozef/PXL_20250722_153339663.PORTRAIT.jpg"
     },
     {
         "date": "2025-07-22",
-        "ageInDays": 221,
         "location": "Piotrków Trybunalski",
         "title": "Józio testuje spacerówkę",
         "imagePath": "../images/jozef/PXL_20250722_173550641.PORTRAIT.jpg"
     },
     {
         "date": "2025-08-05",
-        "ageInDays": 235,
         "location": "Plac przed Bramą Floriańską, Kraków",
         "title": "Józio przed Bramą Floriańską",
         "imagePath": "../images/jozef/PXL_20250805_192216174.NIGHT.jpg"
     },
     {
         "date": "2025-08-06",
-        "ageInDays": 236,
         "location": "Biuro VirtusLab, Kraków",
         "title": "Józio odwiedza biuro taty",
         "imagePath": "../images/jozef/PXL_20250806_130044351.jpg"
     },
     {
         "date": "2025-08-14",
-        "ageInDays": 244,
         "location": "Osiedle \"Sportowa\", Rzeszów",
         "title": "Józio - chłopak z osiedla",
         "imagePath": "../images/jozef/PXL_20250814_165453677.MP.jpg"
     },
     {
         "date": "2025-08-14",
-        "ageInDays": 244,
         "location": "Rzeszów",
         "title": "Józio z mamą zbierają zioła...",
         "imagePath": "../images/jozef/PXL_20250814_173913713~2.jpg"
     },
     {
         "date": "2025-08-20",
-        "ageInDays": 250,
         "location": "",
         "title": "",
         "imagePath": "",
