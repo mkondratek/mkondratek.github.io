@@ -294,9 +294,11 @@
     }
     
     .nav-button {
-        min-width: 250px;
-        width: 100%;
-        max-width: 300px;
+        min-width: 200px;
+        width: auto;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 15px 30px;
     }
 }
 
