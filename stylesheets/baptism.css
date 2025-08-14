@@ -328,8 +328,16 @@
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #2c5aa0, #e3f2fd);
+    height: calc(100% + 100px);
+    top: -50px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        transparent 5%, 
+        #2c5aa0 15%, 
+        #2c5aa0 85%, 
+        transparent 95%, 
+        transparent 100%
+    );
 }
 
 .timeline-item {
@@ -348,9 +356,11 @@
 
 .timeline-date {
     flex: 1;
-    text-align: center;
     padding: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .timeline-date::after {
@@ -364,12 +374,24 @@
     transform: translateY(-50%);
 }
 
+.timeline-item:nth-child(odd) .timeline-date {
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 25px;
+}
+
 .timeline-item:nth-child(odd) .timeline-date::after {
-    right: -6px;
+    right: -3px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 25px;
 }
 
 .timeline-item:nth-child(even) .timeline-date::after {
-    left: -6px;
+    left: -3px;
 }
 
 .timeline-date .date {
@@ -441,33 +463,48 @@
     }
     
     .timeline-item {
-        flex-direction: row !important;
-        margin-left: 60px;
+        flex-direction: column !important;
+        margin-left: 70px;
+        margin-bottom: 40px;
     }
     
     .timeline-date {
         position: absolute;
-        left: -60px;
-        width: 50px;
+        left: -70px;
+        top: 0;
+        width: 60px;
         text-align: center;
+        padding: 10px 5px;
     }
     
     .timeline-date::after {
-        left: 25px !important;
+        left: 30px !important;
+        top: 20px !important;
+        transform: none;
     }
     
     .timeline-date .date {
-        font-size: 0.8em;
+        font-size: 0.75em;
+        line-height: 1.1;
     }
     
     .timeline-date .age {
-        font-size: 0.7em;
+        font-size: 0.65em;
+        line-height: 1.1;
     }
     
     .timeline-content {
         margin: 0;
         flex: none;
         width: 100%;
+    }
+    
+    .timeline-image {
+        height: 200px;
+    }
+    
+    .timeline-text {
+        padding: 15px;
     }
 }
 
