@@ -57,7 +57,7 @@ async function generateTimeline() {
                         📸
                     </div>`}
                 </div>
-                <div class="timeline-text">
+                <div class="timeline-text" data-date="${item.hidden ? '' : formatPolishDate(item.date)}" data-age="${item.hidden ? '' : formatAge(item.ageInDays)}">
                     ${item.hidden ? '' : `<h3>${item.title}</h3>
                     <p class="location">📍 ${item.location}</p>`}
                 </div>
