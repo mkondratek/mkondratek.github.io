@@ -1,41 +1,13 @@
-// Timeline data for baby photos
-const timelineData = [
-    {
-        date: "2024-12-13",
-        ageInDays: 0,
-        location: "Szpital w Warszawie",
-        title: "Pierwsze chwile na świecie",
-        imagePath: "images/jozef-newborn.jpg"
-    },
-    {
-        date: "2024-12-25",
-        ageInDays: 12,
-        location: "Dom rodzinny",
-        title: "Pierwsze Święta Bożego Narodzenia",
-        imagePath: "images/jozef-christmas.jpg"
-    },
-    {
-        date: "2025-01-01",
-        ageInDays: 19,
-        location: "Dom rodzinny", 
-        title: "Nowy Rok z maluszkiem",
-        imagePath: "images/jozef-newyear.jpg"
-    },
-    {
-        date: "2025-02-14",
-        ageInDays: 63,
-        location: "Park Łazienkowski",
-        title: "Pierwszy spacer w parku",
-        imagePath: "images/jozef-park-walk.jpg"
-    },
-    {
-        date: "2025-07-15",
-        ageInDays: 214,
-        location: "Dom rodzinny",
-        title: "Przygotowania do chrztu",
-        imagePath: "images/jozef-baptism-prep.jpg"
+// Function to load timeline data
+async function loadTimelineData() {
+    try {
+        const response = await fetch('../data/timeline.json');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading timeline data:', error);
+        return [];
     }
-];
+}
 
 // Function to calculate age display
 function formatAge(days) {
@@ -63,9 +35,12 @@ function formatPolishDate(dateString) {
 }
 
 // Function to generate timeline HTML
-function generateTimeline() {
+async function generateTimeline() {
     const timelineContainer = document.getElementById('baby-timeline');
     if (!timelineContainer) return;
+
+    const timelineData = await loadTimelineData();
+    if (!timelineData.length) return;
 
     const timelineHTML = timelineData.map(item => `
         <div class="timeline-item">
