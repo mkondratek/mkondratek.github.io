@@ -34,9 +34,17 @@ async function personalizeMessage() {
         return; // Use default message if guest not found
     }
     
+    // Use default values if message_name or message are empty/undefined
+    const guestName = (guest.message_name && guest.message_name.trim()) ? 
+        guest.message_name : 'Drogi Gościu';
+    
+    const message = (guest.message && guest.message.trim()) ? 
+        guest.message : 
+        'Jestem jeszcze malutki i&nbsp;nie wszystko zapamiętam, ale Twoja obecność w&nbsp;tym dniu jest dla mnie bardzo ważna. Dziękuję, że&nbsp;otoczyłeś mnie swoją życzliwością i&nbsp;modlitwą.';
+    
     const personalizedContent = `
-        <h2>Dziękujemy za&nbsp;przybycie, ${guest.message_name}!</h2>
-        <p>${guest.message}</p>
+        <h2>Dziękuję za&nbsp;przybycie, ${guestName}!</h2>
+        <p>${message}</p>
         <div class="guest-info">
             <small>💝 Specjalne podziękowania</small>
         </div>
