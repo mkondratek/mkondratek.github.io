@@ -162,6 +162,27 @@
         "imagePath": "../images/jozef/PXL_20250805_192216174.NIGHT.jpg"
     },
     {
+        "date": "2025-08-06",
+        "ageInDays": 236,
+        "location": "Biuro VirtusLab, Kraków",
+        "title": "Józio odwiedza biuro taty",
+        "imagePath": "../images/jozef/PXL_20250806_130044351.jpg"
+    },
+    {
+        "date": "2025-08-14",
+        "ageInDays": 244,
+        "location": "Osiedle \"Sportowa\", Rzeszów",
+        "title": "Józio - chłopak z osiedla",
+        "imagePath": "../images/jozef/PXL_20250814_165453677.MP.jpg"
+    },
+    {
+        "date": "2025-08-14",
+        "ageInDays": 244,
+        "location": "Rzeszów",
+        "title": "Józio z mamą zbierają zioła...",
+        "imagePath": "../images/jozef/PXL_20250814_173913713~2.jpg"
+    },
+    {
         "date": "2025-08-20",
         "ageInDays": 250,
         "location": "",
