@@ -43,23 +43,23 @@ async function generateTimeline() {
     if (!timelineData.length) return;
 
     const timelineHTML = timelineData.map(item => `
-        <div class="timeline-item">
+        <div class="timeline-item${item.hidden ? ' timeline-hidden' : ''}">
             <div class="timeline-date">
-                <span class="date">${formatPolishDate(item.date)}</span>
-                <span class="age">${formatAge(item.ageInDays)}</span>
+                <span class="date">${item.hidden ? '' : formatPolishDate(item.date)}</span>
+                <span class="age">${item.hidden ? '' : formatAge(item.ageInDays)}</span>
             </div>
             <div class="timeline-content">
                 <div class="timeline-image">
-                    <img src="${item.imagePath}" 
+                    ${item.hidden ? '' : `<img src="${item.imagePath}" 
                          alt="${item.title}" 
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder" style="display: none;">
                         📸
-                    </div>
+                    </div>`}
                 </div>
                 <div class="timeline-text">
-                    <h3>${item.title}</h3>
-                    <p class="location">📍 ${item.location}</p>
+                    ${item.hidden ? '' : `<h3>${item.title}</h3>
+                    <p class="location">📍 ${item.location}</p>`}
                 </div>
             </div>
         </div>

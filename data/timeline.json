@@ -1,5 +1,13 @@
 [
     {
+        "date": "2024-12-10",
+        "ageInDays": -3,
+        "location": "",
+        "title": "",
+        "imagePath": "",
+        "hidden": true
+    },
+    {
         "date": "2024-12-13",
         "ageInDays": 0,
         "location": "Szpital Południowy, Warszawa",
@@ -152,5 +160,13 @@
         "location": "Plac przed Bramą Floriańską, Kraków",
         "title": "Józio przed Bramą Floriańską",
         "imagePath": "../images/jozef/PXL_20250805_192216174.NIGHT.jpg"
+    },
+    {
+        "date": "2025-08-20",
+        "ageInDays": 250,
+        "location": "",
+        "title": "",
+        "imagePath": "",
+        "hidden": true
     }
 ]
