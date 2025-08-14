@@ -1,6 +1,5 @@
 // Guest personalization based on URL parameters
-// Usage: pages/chrzest-jozef-jan.html?guest=Babciu Mariu&message=Custom message
-// or: pages/chrzest-jozef-jan.html?guest=Wujku Tomku (uses default message)
+// Usage: pages/chrzest-jozef-jan.html?guest=13 (uses guest ID from guests.json)
 
 // Function to get URL parameter
 function getURLParameter(name) {
@@ -8,23 +7,36 @@ function getURLParameter(name) {
     return urlParams.get(name);
 }
 
+// Function to load guest data
+async function loadGuestData() {
+    try {
+        const response = await fetch('../data/guests.json');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading guest data:', error);
+        return [];
+    }
+}
+
 // Function to personalize thank you message
-function personalizeMessage() {
-    const guestName = getURLParameter('guest');
-    const customMessage = getURLParameter('message');
+async function personalizeMessage() {
+    const guestId = getURLParameter('guest');
     const thankYouSection = document.querySelector('.thank-you');
     
-    if (!guestName || !thankYouSection) {
+    if (!guestId || !thankYouSection) {
         return; // Use default message
     }
     
-    // Use custom message if provided, otherwise use default
-    const message = customMessage || 
-        `Wasza obecność w&nbsp;tym wyjątkowym dniu sprawia, że&nbsp;staje się&nbsp;on jeszcze bardziej znaczący. Józef Jan zostanie otoczony miłością i&nbsp;błogosławieństwem dzięki wszystkim zebranym.`;
+    const guests = await loadGuestData();
+    const guest = guests.find(g => g.id === parseInt(guestId));
+    
+    if (!guest) {
+        return; // Use default message if guest not found
+    }
     
     const personalizedContent = `
-        <h2>Dziękujemy za&nbsp;przybycie, ${guestName}!</h2>
-        <p>${message}</p>
+        <h2>Dziękujemy za&nbsp;przybycie, ${guest.message_name}!</h2>
+        <p>${guest.message}</p>
         <div class="guest-info">
             <small>💝 Specjalne podziękowania</small>
         </div>
