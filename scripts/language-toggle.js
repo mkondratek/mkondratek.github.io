@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(content => {
                 document.getElementById('name').textContent = content.name;
-                document.getElementById('motto').textContent = content.motto;
-                document.querySelector('#bio p').textContent = content.bio;
+                document.querySelector('#motto p').textContent = content.motto;
+                document.querySelector('#about-me p').textContent = content.aboutMe;
                 document.querySelector('#interests h2').textContent = content.interestsHeader;
                 document.querySelector('#services h2').textContent = content.servicesHeader;
                 document.querySelector('#contact h2').textContent = content.contactHeader;
